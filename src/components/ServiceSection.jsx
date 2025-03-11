@@ -1,8 +1,11 @@
-// ServicesSection.jsx
-import React from 'react';
+'use client'
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const ServicesSection = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [visibleItems, setVisibleItems] = useState([]);
+  
   // Dynamic services data
   const services = [
     {
@@ -50,14 +53,53 @@ const ServicesSection = () => {
     },
   ];
 
+  useEffect(() => {
+    // Initial animation for the section header
+    setIsLoaded(true);
+    
+    // Start with all items visible to prevent any visibility issues
+    setVisibleItems(services.map(service => service.id));
+    
+    // Alternative approach: Animate them in sequence
+    /*
+    const timer = setTimeout(() => {
+      let counter = 0;
+      const interval = setInterval(() => {
+        if (counter < services.length) {
+          setVisibleItems(prev => [...prev, services[counter].id]);
+          counter++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 150);
+      
+      return () => clearInterval(interval);
+    }, 400);
+    
+    return () => clearTimeout(timer);
+    */
+  }, []);
+
   return (
-    <section className="py-16 px-4 bg-black">
+    <section className="py-16 px-4 bg-black overflow-hidden">
       <div className="container mx-auto max-w-6xl">
-        {/* Section header */}
-        <div className="text-center mb-12 text-white">
-          <div className="text-blue-600 font-medium mb-2">Our Service</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Different services for different needs</h2>
-          <p className="text-[#8E8F92] max-w-xl mx-auto">
+        {/* Section header with fade-in animation */}
+        <div className={`text-center mb-12 text-white transition-all duration-700 ease-out ${
+          isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}>
+          <div className={`text-blue-600 font-medium mb-2 transition-all duration-500 delay-100 ${
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}>
+            Our Service
+          </div>
+          <h2 className={`text-3xl md:text-4xl font-bold mb-4 transition-all duration-500 delay-200 ${
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}>
+            Different services for different needs
+          </h2>
+          <p className={`text-[#8E8F92] max-w-xl mx-auto transition-all duration-500 delay-300 ${
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}>
             We have the most talented professionals at your disposal
           </p>
         </div>
@@ -67,22 +109,24 @@ const ServicesSection = () => {
           {services.map((service) => (
             <div 
               key={service.id} 
-              className={`rounded-lg p-6 flex flex-col  `}
+              className={`rounded-lg flex flex-col transform transition-all duration-500 ease-out ${
+                isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+              }`}
+              style={{ transitionDelay: `${(service.id - 1) * 100}ms` }}
             >
-              <div className={` flex justify-center ${service.bgColor}`}>
+              <div className={`flex justify-center ${service.bgColor} transition-all duration-300 hover:shadow-lg`}>
                 <div className="relative w-full h-48">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-contain"
+                    className="object-contain transition-transform duration-500 hover:scale-105"
                   />
                 </div>
               </div>
-              <div className='bg-[#131316] p-2'>
-
-              <h3 className="text-xl font-semibold text-center mb-2  text-white text-[600]">{service.title}</h3>
-              <p className="text-[#8E8F92] text-center text-sm">{service.description}</p>
+              <div className='bg-[#131316] p-6 flex-1 transition-all duration-300 hover:bg-[#1a1a1f]'>
+                <h3 className="text-xl font-semibold text-center mb-2 text-white text-[600]">{service.title}</h3>
+                <p className="text-[#8E8F92] text-center text-sm">{service.description}</p>
               </div>
             </div>
           ))}

@@ -32,7 +32,7 @@ const DevelopmentShowcase = () => {
 
   return (
     <div className="bg-black relative z-40">
-      <div className="min-h-screen bg-black text-white p-8 relative z-40 mt-10">
+      <div className=" bg-black text-white p-8 relative z-40 mt-10">
         {/* Header Section */}
 
         <div className="text-center mb-16 max-w-3xl mx-auto">

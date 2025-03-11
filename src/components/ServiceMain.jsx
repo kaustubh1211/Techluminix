@@ -1,38 +1,75 @@
-import React from "react";
+'use client'
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const ServiceMain = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  useEffect(() => {
+    // Set loaded state after component mounts to trigger animations
+    setIsLoaded(true);
+  }, []);
+
   return (
-    <section className="py-16 md:py-24    bg-black overflow-hidden  mt-36">
+    <section className="py-16 md:py-24 bg-black overflow-hidden mt-36">
       <div className="container mx-auto px-20">
         <div className="flex flex-col md:flex-row items-center">
-          {/* Left content */}
-          <div className="  md:w-1/2 mb-10 md:mb-0 pr-0 text-white ">
-            <h3 className="text-blue-600 font-medium mb-4">Work with us</h3>
+          {/* Left content with fade-in animation */}
+          <div 
+            className={`md:w-1/2 mb-10 md:mb-0 pr-0 text-white transform transition-all duration-700 ease-in-out ${
+              isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
+            <h3 
+              className={`text-blue-600 font-medium mb-4 transition-all duration-500 delay-100 ${
+                isLoaded ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+              }`}
+            >
+              Work with us
+            </h3>
 
-            <h1 className="text-2xl md:text-4xl font-sans font-semibold text-[600]  mb-6">
+            <h1 
+              className={`text-2xl md:text-4xl font-sans font-semibold text-[600] mb-6 transition-all duration-500 delay-200 ${
+                isLoaded ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+              }`}
+            >
               Your goals are closer than you realize—take the next step today.
             </h1>
 
-            <p className="text-[#8E8F92] mb-8">
+            <p 
+              className={`text-[#8E8F92] mb-8 transition-all duration-500 delay-300 ${
+                isLoaded ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+              }`}
+            >
               Techluminx is your all-in-one partner: your ideas, our solutions.
               Let's build your dream empire!
             </p>
 
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition duration-300">
+            <button 
+              className={`bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition-all duration-500 delay-400 ${
+                isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
+              }`}
+            >
               Contact us
             </button>
           </div>
 
-          {/* Right content - image */}
-          <div className="w-full md:w-1/2 relative">
+          {/* Right content - image with fade-in animation */}
+          <div 
+            className={`w-full md:w-1/2 relative transition-all duration-1000 ease-out ${
+              isLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+            }`}
+          >
             <div className="relative">
               <Image
                 src="/assest/Service/head.svg"
                 alt="App interface mockup"
-                className="w-full  h-auto "
+                className={`w-full h-auto transition-transform duration-700 ${
+                  isLoaded ? "scale-100" : "scale-95"
+                }`}
                 width={804}
                 height={700}
+                onLoadingComplete={() => setIsLoaded(true)}
               />
             </div>
           </div>
