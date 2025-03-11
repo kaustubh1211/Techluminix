@@ -115,7 +115,7 @@ const OurServicesSection = () => {
                 {/* Image with saturation effect */}
                 <div className="mt-4">
                   <img
-                    src="/assest/Hover/BookAll.png"
+                    src="/assest/Hover/BooKAll.png"
                     className="w-auto h-28 saturate-0 group-hover:saturate-100 transition-all duration-300"
                   />
                 </div>

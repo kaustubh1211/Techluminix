@@ -9,14 +9,14 @@ const ServicesSection = () => {
       id: 1,
       title: 'Video Editing',
       description: 'Create videos with flawless precision and captivating visuals.',
-      image: '/assest/Service/video.png',
+      image: '/assest/Service/Video.png',
       bgColor: 'bg-[#FFE9CF]',
     },
     {
       id: 2,
       title: 'UX/UI Design',
       description: 'Craft intuitive experiences with sleek design and flawless performance.',
-      image: '/assest/Service/design.png',
+      image: '/assest/Service/Design.png',
       bgColor: 'bg-green-50',
     },
     {
