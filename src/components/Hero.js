@@ -41,7 +41,7 @@ const HeroSection = () => {
               Software Solutions
             </h1>
 
-            <p className="text-gray-600 text-sm max-w-xl font-sans">
+            <p className="text-gray-600 text-sm max-w-xl font-plus_jakarta_Sans">
               Empowering businesses with seamless UI/UX, robust app development,
               and innovative IT solutions. Let's build the future together.
             </p>
@@ -50,13 +50,17 @@ const HeroSection = () => {
           {/* Right Content */}
           <div className="mt-8 md:mt-16 lg:mt-28">
             <div className="flex flex-col md:flex-row justify-center lg:justify-end gap-4 lg:gap-11 max-w-3xl mx-auto lg:mx-0">
-            
-            {/* 1st div  */}
-              <div className="w-full md:w-[221px] h-[250px] md:h-[310px]    bg-white rounded-lg shadow-2xl relative">
-             
+              {/* 1st div - Enhanced with gradients and shapes */}
+              <div className="w-full md:w-[221px] h-[250px] md:h-[310px] bg-white rounded-lg shadow-2xl relative overflow-hidden">
+                {/* Decorative elements */}
+                    {/* Accent line */}
+                {/* <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-purple-500"></div> */}
+
+                {/* Content */}
+              
               </div>
 
-              {/* cart 2 */}
+              {/* cart 2 - unchanged */}
               <div className="relative md:w-[346px] h-[300px] md:h-[387px] rounded-lg shadow-xl">
                 {/* Card background */}
                 <div className="absolute inset-0 bg rounded-lg bg-white"></div>
@@ -70,10 +74,10 @@ const HeroSection = () => {
                 </div>
 
                 {/* Card content */}
-                <div className="absolute inset-0 p-3 flex flex-col">
+                <div className="absolute inset-0 p-1.5 flex flex-col">
                   {/* Blue background area */}
                   <div
-                    className="relative mt-4  mb-6  overflow-hidden"
+                    className="relative mt-4 mb-6 overflow-hidden"
                     style={{
                       backgroundImage:
                         "linear-gradient(to right bottom, #3770ED80 0%, #3770ED80 10%, #D3E1FF 35% , white 50% )",
@@ -83,9 +87,9 @@ const HeroSection = () => {
                       className="absolute inset-0"
                       style={{
                         backgroundImage: `
-            linear-gradient(to right, rgba(156, 163, 175, 0.2) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(156, 163, 175, 0.2) 1px, transparent 1px)
-          `,
+                linear-gradient(to right, rgba(156, 163, 175, 0.2) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(156, 163, 175, 0.2) 1px, transparent 1px)
+              `,
                         backgroundSize: "1.5rem 1.5rem",
                         mask: "radial-gradient(ellipse at left, black 40%, transparent 70%)",
                         WebkitMask:
@@ -93,13 +97,26 @@ const HeroSection = () => {
                         filter: "drop-shadow(0 0 1px rgba(156, 163, 175, 0.1))",
                       }}
                     />
-
-                    <Image src="assest/Hero/icon.svg" alt="icon" className="  w-72 h-48" width={800} height={800} />
+        
+                    <Image
+                      src="assest/Hero/pointer.svg"
+                      alt="icon"
+                      className="w-30 absolute align-middle mt-16 right-2 h-30"
+                      width={120}
+                      height={150}
+                    />
+                    <Image
+                      src="assest/Hero/icon.svg"
+                      alt="icon"
+                      className="w-72 h-48"
+                      width={800}
+                      height={800}
+                    />
                   </div>
 
                   {/* Text content */}
-                  <div className="mb-2 pl-5  ">
-                    <h3 className="text-xl  font-semibold text-gray-900">
+                  <div className="mb-2 pl-5">
+                    <h3 className="text-xl font-semibold text-gray-900">
                       Effortless integration.
                     </h3>
                     <p className="text-sm text-gray-500 mt-1">

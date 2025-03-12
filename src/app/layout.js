@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Inter, Playfair } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Playfair , Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScrool";
 
@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 const inter = Inter({ subsets: ["latin"] });
 
 const playfair = Playfair({ subsets: ["latin"] });
+const plus_Jakarta_Sans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 export const metadata = {
   title: "TechLuminix",
   description:

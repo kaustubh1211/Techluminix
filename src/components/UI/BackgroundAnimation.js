@@ -19,20 +19,19 @@ export default function BackgroundAnimation() {
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(156, 163, 175, 0.2) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(156, 163, 175, 0.2) 1px, transparent 1px)
-          `,
-          backgroundSize: "3rem 3rem",
-          mask: "radial-gradient(circle at center, black 60%, transparent 70%)",
-          WebkitMask:
-            "radial-gradient(circle at center, black 60%, transparent 70%)",
-          filter: "drop-shadow(0 0 1px rgba(156, 163, 175, 0.1))",
-        }}
-      />
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: `
+        linear-gradient(to right, rgba(156, 163, 175, 0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(156, 163, 175, 0.2) 1px, transparent 1px)
+      `,
+      backgroundSize: "3rem 3rem",
+      mask: "radial-gradient(ellipse at center, black 50%, transparent 70%)",
+      WebkitMask: "radial-gradient(ellipse at center, black 50%, transparent 70%)",
+      filter: "drop-shadow(0 0 1px rgba(156, 163, 175, 0.1))",
+    }}
+  />
 
       {/* Animated Light-Up Squares */}
       <div className="absolute inset-0 grid grid-cols-[repeat(20,4rem)] grid-rows-[repeat(20,4rem)]">
