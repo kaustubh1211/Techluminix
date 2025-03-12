@@ -41,8 +41,8 @@ const OurServicesSection = () => {
               <div
                 className="absolute inset-0 opacity-15"
                 style={{
-                  backgroundImage: `radial-gradient(circle at 2px 2px, white 2px, transparent 0)`,
-                  backgroundSize: "20px 20px",
+                  backgroundImage: `radial-gradient(circle at 2px 2px, white 1.7px, transparent 0)`,
+                  backgroundSize: "15px 15px",
                 }}
               />
               <div className="text-gray-400 relative z-10">
@@ -72,8 +72,8 @@ const OurServicesSection = () => {
               <div
                 className="absolute inset-0 opacity-15"
                 style={{
-                  backgroundImage: `radial-gradient(circle at 2px 2px, white 2px, transparent 0)`,
-                  backgroundSize: "20px 20px",
+                  backgroundImage: `radial-gradient(circle at 2px 2px, white 1.7px, transparent 0px)`,
+                  backgroundSize: "15px 15px",
                 }}
               />
               <div className="text-gray-400 relative z-10 text-xs font-mono">
@@ -103,8 +103,8 @@ const OurServicesSection = () => {
               <div
                 className="absolute inset-0 opacity-15"
                 style={{
-                  backgroundImage: `radial-gradient(circle at 2px 2px, white 2px, transparent 0)`,
-                  backgroundSize: "20px 20px",
+                  backgroundImage: `radial-gradient(circle at 2px 2px, white 1.7px, transparent 0)`,
+                  backgroundSize: "15px 15px",
                 }}
               />
 
