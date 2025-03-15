@@ -12,7 +12,7 @@ const OurServicesSection = () => {
         </div>
 
         {/* Stats Card with Gradient */}
-
+ 
         <div
           className="relative bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg p-8 mb-12 flex flex-col items-center justify-center"
           style={{
@@ -119,7 +119,7 @@ const OurServicesSection = () => {
                     className="w-auto h-28 saturate-0 group-hover:saturate-100 transition-all duration-300"
                   />
                 </div>
-              </div>
+              </div>  
             </div>
 
             <div className="p-6 text-center">
