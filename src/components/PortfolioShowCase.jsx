@@ -26,7 +26,7 @@ const PortfolioShowcase = () => {
   ];
 
   return (
-    <div className=" py-20 md:px-16 mx-3  w-full   ">
+    <div className=" py-20 md:px-16 mx-3     ">
       <div className=" container mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">

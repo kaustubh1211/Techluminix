@@ -8,6 +8,7 @@ import DevelopmentWorkflow from "../components/WorkFlow";
 import StatsSection from "../components/StatsSection";
 import PortfolioShowcase from "../components/PortfolioShowCase";
 import OurserviceHome from "@/components/OurserviceHome";
+// import TechStack from './components/TechStack';
 import Head from "next/head";
 export default function Home() {
   return (
