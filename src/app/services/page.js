@@ -1,3 +1,4 @@
+import Brands from "@/components/Brands";
 import ContactHero from "@/components/Contact-hero";
 import DarkNavbar from "@/components/DarkNavbar";
 import DarkContactHero from "@/components/DarkTheem/DarkContactHero";
@@ -14,6 +15,7 @@ export default function page() {
       <DarkNavbar />
       <ServiceMain />
       <ServicesSection />
+      <Brands/>
      <DarkContactHero/>
      <DarkFooter/>
     </div>

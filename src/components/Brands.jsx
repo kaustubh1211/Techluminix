@@ -6,9 +6,10 @@ function ParallaxBrands() {
     const brands = [
         "/assest/Brands/brand1.png",
         "/assest/Brands/brand3.png",
+        "/assest/Brands/logo-4.png",
         "/assest/Brands/brand4.png",
         "/assest/Brands/brand2.png",
-        "/assest/Brands/brand5.png"
+        "/assest/Brands/logo-6.png",
       ];
     
       // Create three copies to ensure smooth transition
@@ -19,9 +20,9 @@ function ParallaxBrands() {
       const totalWidth = brands.length * itemWidth;
     
       return (
-        <div className="relative overflow-hidden flex w-full h-20 bg-white top-10">
+        <div className="relative overflow-hidden flex w-full h-20 bg top-10">
           {/* Left Fade Effect */}
-          <div className="absolute left-0 top-0 w-32 sm:w-48 md:w-[32rem] h-full bg-gradient-to-r from-white via-white to-transparent z-10" />
+          <div className="absolute left-0 top-0 w-32 sm:w-48 md:w-[32rem] h-full bg-gradient-to-r from-black via-black to-transparent z-10" />
           
           {/* Infinite Scrolling Animation */}
           <motion.div 
@@ -39,7 +40,7 @@ function ParallaxBrands() {
             {repeatedBrands.map((brand, index) => (
               <div 
                 key={index} 
-                className="flex items-center justify-center w-32 h-16 mx-5"
+                className="flex items-center justify-center w-32 h-20 mx-5"
               >
                 <img 
                   src={brand} 
@@ -51,13 +52,13 @@ function ParallaxBrands() {
           </motion.div>
     
           {/* Right Fade Effect */}
-          <div className="absolute right-0 top-0 w-32 sm:w-48 md:w-[32rem] h-full bg-gradient-to-l from-white via-white to-transparent " />        </div>
+          <div className="absolute right-0 top-0 w-32 sm:w-48 md:w-[32rem] h-full bg-gradient-to-l from-black via-black to-transparent " />        </div>
   );
 }
 
 const Brands = () => {
   return (
-    <section className="py-32 text-center top-20">
+    <section className="py-32 text-center top-20 bg-black">
         <h1 className="  font-sans  font-semibold text-[#6B6B6B]  text-lg">Trusted by 100% businesses for innovative design and development. </h1>
       <ParallaxBrands  />
       

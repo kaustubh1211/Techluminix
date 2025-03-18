@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const DarkFooter = () => {
@@ -22,31 +23,46 @@ const DarkFooter = () => {
               into reality.
             </p>
             <div className="flex gap-4 justify-center items-center lg:justify-start lg:items-start">
-              <img
-                src="/assest/Social/Vector.png"
-                className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
-              />
-              <img
-                src="/assest/Social/instagram.png"
-                className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
-              />
-              <img
-                src="/assest/Social/whatsapp.png"
-                className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
-              />
-              <img
-                src="/assest/Social/facebook.png"
-                className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
-              />
-              <img
-                src="/assest/Social/linkdin.png"
-                className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
-              />
-              <img
-                src="/assest/Social/youtube.png"
-                className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
-              />
+              <Link href="https://x.com/TechLuminix">
+                <img
+                  src="/assest/Social/Vector.png"
+                  className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
+                />
+              </Link>
 
+              <Link href="https://www.instagram.com/techluminix/">
+                <img
+                  src="/assest/Social/instagram.png"
+                  className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
+                />
+              </Link>
+
+              <Link href="https://www.whatsapp.com/channel/0029VaNYEtR6rsQm1MrFEV23">
+                <img
+                  src="/assest/Social/whatsapp.png"
+                  className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
+                />
+              </Link>
+              <Link href="https://www.facebook.com/people/TechLuminix/61562395532365/">
+                <img
+                  src="/assest/Social/facebook.png"
+                  className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
+                />
+              </Link>
+
+              <Link href="https://www.linkedin.com/company/techluminix-pvt-ltd/posts/?feedView=all">
+                <img
+                  src="/assest/Social/linkdin.png"
+                  className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
+                />
+              </Link>
+
+              <Link href="https://www.youtube.com/@TechLuminix">
+                <img
+                  src="/assest/Social/youtube.png"
+                  className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
+                />
+              </Link>
             </div>
           </div>
 
@@ -133,12 +149,18 @@ const DarkFooter = () => {
             Copyright © 2025 Techluminix. All Rights Reserved
           </p>
           <div className="flex gap-6 lg:mr-10">
-            <a href="#" className="text-gray-300 hover:text-blue-500 text-sm">
+            <Link
+              href="term-conditions"
+              className="text-gray-300 hover:text-blue-500 text-sm"
+            >
               Terms & Conditions
-            </a>
-            <a href="#" className="text-gray-300 hover:text-blue-500 text-sm">
+            </Link>
+            <Link
+              href="privacy-policy"
+              className="text-gray-300 hover:text-blue-500 text-sm"
+            >
               Privacy Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>
