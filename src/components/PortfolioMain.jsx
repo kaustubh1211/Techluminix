@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const PortfolioComponent = () => {
   const categories = [
@@ -15,61 +16,154 @@ const PortfolioComponent = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [visibleItems, setVisibleItems] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
+  // Extended portfolio items with more details
   const portfolioItems = [
     {
       id: 1,
       image: "/assest/Portfolio/app/img2.svg",
       categories: ["Websites"],
       gridClass: "col-span-1 row-span-1",
+      title: "E-Commerce Platform",
+      description: "A fully responsive e-commerce website with integrated payment solutions and inventory management system.",
+      client: "TechRetail Inc.",
+      technology: "React, Node.js, MongoDB, Stripe",
+      duration: "3 months",
+      projectImages: [
+        "/assest/Portfolio/app/img2.svg",
+        "/assest/Portfolio/website/img3.svg",
+        "/assest/Portfolio/website/img5.svg"
+      ]
     },
     {
       id: 2,
       image: "/assest/Portfolio/website/img3.svg",
       categories: ["Websites", "Graphics Design"],
       gridClass: "col-span-1 row-span-1 ",
+      title: "Creative Agency Website",
+      description: "A modern website showcasing creative work with custom animations and interactive elements.",
+      client: "ArtisticVisions Co.",
+      technology: "Next.js, Tailwind CSS, GSAP",
+      duration: "2 months",
+      projectImages: [
+        "/assest/Portfolio/website/img3.svg",
+        "/assest/Portfolio/app/img1.svg",
+        "/assest/Portfolio/website/img4.svg"
+      ]
     },
     {
       id: 3,
       image: "/assest/Portfolio/app/img1.svg",
       categories: ["Graphics Design"],
       gridClass: "col-span-1 row-span-1",
+      title: "Brand Identity Package",
+      description: "Complete brand identity design including logo, color palette, typography, and brand guidelines.",
+      client: "GreenLife Organics",
+      technology: "Adobe Creative Suite, Figma",
+      duration: "1.5 months",
+      projectImages: [
+        "/assest/Portfolio/app/img1.svg",
+        "/assest/Portfolio/app/img5.svg",
+        "/assest/Portfolio/app/img4.svg"
+      ]
     },
     {
       id: 4,
       image: "/assest/Portfolio/app/img5.svg",
       categories: ["Graphics Design"],
       gridClass: "col-span-1 row-span-1",
+      title: "Product Packaging Design",
+      description: "Premium packaging design for consumer electronics with sustainable materials.",
+      client: "EcoTech Gadgets",
+      technology: "Adobe Illustrator, Photoshop, Blender",
+      duration: "1 month",
+      projectImages: [
+        "/assest/Portfolio/app/img5.svg",
+        "/assest/Portfolio/app/img3.svg",
+        "/assest/Portfolio/app/img2.svg"
+      ]
     },
     {
       id: 5,
       image: "/assest/Portfolio/website/img5.svg",
       categories: ["Websites", "SEO"],
       gridClass: "col-span-1 row-span-1",
+      title: "SEO-Optimized Blog",
+      description: "Content-focused blog with advanced SEO implementation and content strategy.",
+      client: "HealthWise Network",
+      technology: "WordPress, Yoast SEO, Google Analytics",
+      duration: "2.5 months",
+      projectImages: [
+        "/assest/Portfolio/website/img5.svg",
+        "/assest/Portfolio/website/img4.svg",
+        "/assest/Portfolio/website/img3.svg"
+      ]
     },
     {
       id: 6,
       image: "/assest/Portfolio/app/img4.svg",
       categories: ["Graphics Design"],
       gridClass: "col-span-1 row-span-1",
+      title: "Annual Report Design",
+      description: "Visual storytelling through data visualization and infographics for annual corporate report.",
+      client: "FinTrust Group",
+      technology: "Adobe InDesign, Illustrator, Tableau",
+      duration: "3 weeks",
+      projectImages: [
+        "/assest/Portfolio/app/img4.svg",
+        "/assest/Portfolio/app/img3.svg",
+        "/assest/Portfolio/app/img2.svg"
+      ]
     },
     {
       id: 7,
       image: "/assest/Portfolio/app/img3.svg",
       categories: ["Graphics Design"],
       gridClass: "col-span-1 row-span-1",
+      title: "Event Promotion Materials",
+      description: "Complete set of promotional materials for a major tech conference including digital and print media.",
+      client: "TechSummit Events",
+      technology: "Adobe Creative Suite, Canva Pro",
+      duration: "1 month",
+      projectImages: [
+        "/assest/Portfolio/app/img3.svg",
+        "/assest/Portfolio/app/img4.svg",
+        "/assest/Portfolio/app/img5.svg"
+      ]
     },
     {
       id: 8,
       image: "/assest/Portfolio/app/img2.svg",
       categories: ["Mobile apps"],
       gridClass: "col-span-1 row-span-1",
+      title: "Fitness Tracking App",
+      description: "Mobile application for fitness tracking with social features and personalized workout plans.",
+      client: "FitLife Solutions",
+      technology: "React Native, Firebase, HealthKit",
+      duration: "4 months",
+      projectImages: [
+        "/assest/Portfolio/app/img2.svg",
+        "/assest/Portfolio/app/img1.svg",
+        "/assest/Portfolio/app/img3.svg"
+      ]
     },
     {
       id: 9,
       image: "/assest/Portfolio/website/img4.svg",
       categories: ["Websites", "Social media Branding"],
       gridClass: "col-span-1 row-span-1",
+      title: "Social Media Campaign",
+      description: "Integrated social media campaign across multiple platforms with cohesive visual identity.",
+      client: "Urban Fashion Collective",
+      technology: "Adobe Photoshop, After Effects, Meta Business Suite",
+      duration: "2 months",
+      projectImages: [
+        "/assest/Portfolio/website/img4.svg",
+        "/assest/Portfolio/website/img5.svg",
+        "/assest/Portfolio/app/img5.svg"
+      ]
     },
   ];
 
@@ -109,6 +203,44 @@ const PortfolioComponent = () => {
         setVisibleItems(portfolioItems);
       }, 400);
     }, 100);
+  }, []);
+
+  // Open project dialog
+  const openProjectDialog = (project) => {
+    setSelectedProject(project);
+    setCurrentImageIndex(0);
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when dialog is open
+  };
+
+  // Close project dialog
+  const closeProjectDialog = () => {
+    setSelectedProject(null);
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+  };
+
+  // Handle image navigation
+  const nextImage = () => {
+    if (!selectedProject) return;
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === selectedProject.projectImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevImage = () => {
+    if (!selectedProject) return;
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? selectedProject.projectImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Close dialog when clicking outside or pressing ESC
+  useEffect(() => {
+    const handleEscKey = (e) => {
+      if (e.key === 'Escape') closeProjectDialog();
+    };
+
+    window.addEventListener('keydown', handleEscKey);
+    return () => window.removeEventListener('keydown', handleEscKey);
   }, []);
 
   return (
@@ -166,13 +298,14 @@ const PortfolioComponent = () => {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 width={800}
                 height={800}
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,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"
               />
             </div>
             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-all duration-500">
               <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                <button className="bg-white text-black rounded-full py-2 px-4 text-sm font-medium hover:bg-blue-600 hover:text-white transition-all duration-300">
+                <button 
+                  className="bg-white text-black rounded-full py-2 px-4 text-sm font-medium hover:bg-blue-600 hover:text-white transition-all duration-300"
+                  onClick={() => openProjectDialog(item)}
+                >
                   View Project
                 </button>
               </div>
@@ -180,6 +313,144 @@ const PortfolioComponent = () => {
           </div>
         ))}
       </div>
+
+    {/* Project Dialog Modal */}
+{selectedProject && (
+  <div 
+    className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in"
+    onClick={closeProjectDialog}
+  >
+    <div 
+      className="bg-gradient-to-b from-gray-900 to-black rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl transform transition-all duration-500 scale-100 opacity-100"
+      onClick={(e) => e.stopPropagation()}
+      style={{maxHeight: 'calc(100vh - 40px)'}}
+    >
+      {/* Close button */}
+      <button 
+        onClick={closeProjectDialog}
+        className="absolute top-4 right-4 bg-black/50 hover:bg-blue-600 p-2 rounded-full transition-all duration-300 z-10 shadow-lg"
+      >
+        <X size={20} className="text-white" />
+      </button>
+      
+      {/* Image slider */}
+      <div className="relative h-72 sm:h-96 md:h-96 w-full">
+        <div className="absolute inset-0">
+          {selectedProject.projectImages.map((img, idx) => (
+            <div 
+              key={idx}
+              className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+                idx === currentImageIndex 
+                  ? 'opacity-100 scale-100' 
+                  : 'opacity-0 scale-105'
+              }`}
+            >
+              <Image 
+                src={img}
+                alt={`Project image ${idx + 1}`}
+                className="w-full h-full object-cover"
+                width={1200}
+                height={800}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-50"></div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Navigation arrows with improved styling */}
+        <button 
+          onClick={prevImage}
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-blue-600 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
+        >
+          <ChevronLeft size={24} className="text-white group-hover:text-white" />
+        </button>
+        
+        <button 
+          onClick={nextImage}
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-blue-600 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
+        >
+          <ChevronRight size={24} className="text-white group-hover:text-white" />
+        </button>
+        
+        {/* Image indicator dots */}
+        <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-3">
+          {selectedProject.projectImages.map((_, idx) => (
+            <button 
+              key={idx}
+              onClick={() => setCurrentImageIndex(idx)}
+              className={`transition-all duration-300 ${
+                idx === currentImageIndex 
+                  ? 'w-8 h-2 bg-blue-600' 
+                  : 'w-2 h-2 bg-white/50 hover:bg-white/80'
+              } rounded-full`}
+            />
+          ))}
+        </div>
+      </div>
+      
+      {/* Project information with improved styling */}
+      <div className="p-8 pb-10 overflow-y-auto scrollbar-hide" style={{maxHeight: 'calc(100vh - 40px - 24rem)'}}>
+        <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">{selectedProject.title}</h3>
+        
+        <p className="text-gray-300 mb-8 text-lg leading-relaxed">{selectedProject.description}</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-6">
+            <div>
+              <h4 className="text-blue-500 font-semibold mb-2 flex items-center">
+                <span className="w-1 h-6 bg-blue-500 mr-2 rounded-full"></span>
+                Client
+              </h4>
+              <p className="text-gray-300 pl-3">{selectedProject.client}</p>
+            </div>
+            
+            <div>
+              <h4 className="text-blue-500 font-semibold mb-2 flex items-center">
+                <span className="w-1 h-6 bg-blue-500 mr-2 rounded-full"></span>
+                Categories
+              </h4>
+              <div className="flex flex-wrap gap-2 pl-3">
+                {selectedProject.categories.map((cat, idx) => (
+                  <span 
+                    key={idx}
+                    className="bg-gray-800/80 text-gray-300 px-3 py-1 rounded-full border border-gray-700/50 text-sm"
+                  >
+                    {cat}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+          
+          <div className="space-y-6">
+            <div>
+              <h4 className="text-blue-500 font-semibold mb-2 flex items-center">
+                <span className="w-1 h-6 bg-blue-500 mr-2 rounded-full"></span>
+                Technologies
+              </h4>
+              <p className="text-gray-300 pl-3">{selectedProject.technology}</p>
+            </div>
+            
+            <div>
+              <h4 className="text-blue-500 font-semibold mb-2 flex items-center">
+                <span className="w-1 h-6 bg-blue-500 mr-2 rounded-full"></span>
+                Project Duration
+              </h4>
+              <p className="text-gray-300 pl-3">{selectedProject.duration}</p>
+            </div>
+          </div>
+        </div>
+        
+        {/* Call to action button */}
+        <div className="mt-10 text-center">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 transform hover:scale-105">
+            View Live Project
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
     </div>
   );
 };

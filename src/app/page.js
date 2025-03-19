@@ -87,6 +87,15 @@ export default function Home() {
             ],
           })}
         </script>
+
+
+
+        {/* captacha */}
+        <script
+          src="https://www.google.com/recaptcha/api.js?render=6LeIdw4qAAAAAJOwjBqnSsOuwHPq9Lb8lvFTuWaP"
+          async
+          defer
+        ></script>
       </Head>
 
       <main>

@@ -1,6 +1,7 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import Script from 'next/script';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -11,26 +12,33 @@ const ContactUs = () => {
     message: '',
   });
 
+  
+  const [status, setStatus] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData((prev) => ({
+      ...prev,
       [name]: value,
-    });
+    }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
-    // Reset form after submission
-    setFormData({
-      firstName: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: '',
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
     });
+
+    const data = await res.json();
+    if (data.success) {
+      setStatus("✅ Message Sent Successfully!");
+      setFormData({ firstName: "", email: "", phone: "", subject: "", message: "" });
+    } else {
+      setStatus("❌ Error Sending Message.");
+    }
   };
 
   return (
@@ -38,13 +46,14 @@ const ContactUs = () => {
       <div className="max-w-6xl mx-auto py-16 px-4 md:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-blue-500 mb-2">Contact us</p>
+       
           <h2 className="text-3xl font-bold mb-3">Talk to us.</h2>
           <p className="text-gray-400 max-w-md mx-auto">
             Ready to grow your business online? Schedule a call with us or reach
             out below.
           </p>
         </div>
-
+      
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Form Section */}
           <div className="w-full lg:w-1/2">
@@ -137,7 +146,7 @@ const ContactUs = () => {
                   className="w-full p-3 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 ></textarea>
               </div>
-
+              {status && <p className="mt-2">{status}</p>}
               <button
                 type="submit"
                 className="w-full py-3 px-4 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-md transition-colors duration-300"
