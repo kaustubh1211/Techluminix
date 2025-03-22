@@ -49,7 +49,7 @@ const PortfolioShowcase = () => {
               className="bg-[#F7F7F7] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <div className=" p-2">
-                <Image
+                <img
                   src={project.image}
                   alt={project.name}
                   className="w-full h-full object-cover rounded"

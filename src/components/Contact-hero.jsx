@@ -41,12 +41,11 @@ const ContactHero = () => {
           
           {/* Image Container */}
           <div className="relative w-full h-full flex items-center justify-center">
-            <Image
+            <img
               src="/assest/Logo/10.png"
               alt="VR User"
               className=" w-56 h-52 object-contain"
-              width={800}
-              height={700}
+            
             />
           </div>
         </div>

@@ -10,7 +10,6 @@ import PortfolioShowcase from "../components/PortfolioShowCase";
 import OurserviceHome from "@/components/OurserviceHome";
 // import TechStack from './components/TechStack';
 import Head from "next/head";
-import Brands from "@/components/Brands";
 export default function Home() {
   return (
     <>

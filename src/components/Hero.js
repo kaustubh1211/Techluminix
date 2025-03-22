@@ -98,14 +98,14 @@ const HeroSection = () => {
                       }}
                     />
         
-                    <Image
+                    <img
                       src="assest/Hero/pointer.svg"
                       alt="icon"
                       className="w-30 absolute align-middle mt-16 right-2 h-30"
                       width={120}
                       height={150}
                     />
-                    <Image
+                    <img
                       src="assest/Hero/icon.svg"
                       alt="icon"
                       className="w-72 h-48"

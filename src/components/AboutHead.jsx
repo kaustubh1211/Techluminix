@@ -82,7 +82,7 @@ export default function AboutHead() {
             <div className="w-full md:w-1/2 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl transform rotate-3 opacity-20 blur-sm"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-800 transform transition-all duration-500 hover:-translate-y-2">
-                <Image
+                <img
                   src="/assest/About-us/About1.png"
                   alt="Digital innovation team"
                   className="w-full h-auto"
@@ -152,7 +152,7 @@ export default function AboutHead() {
             <div className="w-full md:w-1/2 order-1 md:order-2 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl transform -rotate-2 opacity-20 blur-sm"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-800 transform hover:scale-[1.02] transition-all duration-500">
-                <Image
+                <img
                   src="/assest/About-us/About2.png"
                   alt="Team members collaborating"
                   className="w-full h-auto"

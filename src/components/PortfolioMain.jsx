@@ -292,7 +292,7 @@ const PortfolioComponent = () => {
             }}
           >
             <div className="w-full h-full overflow-hidden bg-gray-100">
-              <Image
+              <img
                 src={item.image}
                 alt={`Portfolio item ${item.id}`}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -345,7 +345,7 @@ const PortfolioComponent = () => {
                   : 'opacity-0 scale-105'
               }`}
             >
-              <Image 
+              <img
                 src={img}
                 alt={`Project image ${idx + 1}`}
                 className="w-full h-full object-cover"

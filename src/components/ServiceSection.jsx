@@ -116,11 +116,12 @@ const ServicesSection = () => {
             >
               <div className={`flex justify-center ${service.bgColor} transition-all duration-300 hover:shadow-lg`}>
                 <div className="relative w-full h-48">
-                  <Image
+                  <img
                     src={service.image}
                     alt={service.title}
-                    fill
-                    className="object-contain transition-transform duration-500 hover:scale-105"
+                    width={500}
+                    height={500}
+                    className="object-contain transition-transform duration-500  h-48 hover:scale-105"
                   />
                 </div>
               </div>
