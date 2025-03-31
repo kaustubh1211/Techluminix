@@ -7,7 +7,7 @@ const PortfolioComponent = () => {
   const categories = [
     "All",
     "Websites",
-    "Mobile apps",
+    "Mobile apps",  
     "Social media Branding",
     "Graphics Design",
     "SEO",
@@ -18,171 +18,156 @@ const PortfolioComponent = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+
   // Extended portfolio items with more details
   const portfolioItems = [
     {
       id: 1,
-      image: "/assest/Portfolio/app/img2.svg",
-      categories: ["Websites"],
+      image: "/assest/Portfolio/1.png",
+      categories: ["Mobile apps"],
       gridClass: "col-span-1 row-span-1",
-      title: "E-Commerce Platform",
-      description: "A fully responsive e-commerce website with integrated payment solutions and inventory management system.",
-      client: "TechRetail Inc.",
-      technology: "React, Node.js, MongoDB, Stripe",
-      duration: "3 months",
+      title: "Match deals",
+      description:
+        "A feature-rich real estate mobile app for seamless property buying and selling.",
+      client: "Azim saboowala",
+      technology: "Flutter, Dart, asp.net, c#",
+      duration: "2 months",
       projectImages: [
-        "/assest/Portfolio/app/img2.svg",
-        "/assest/Portfolio/website/img3.svg",
-        "/assest/Portfolio/website/img5.svg"
-      ]
+        "/assest/Portfolio/7.png",
+        "/assest/Portfolio/24.png",
+        "/assest/Portfolio/1.png",
+      ],
     },
     {
       id: 2,
-      image: "/assest/Portfolio/website/img3.svg",
-      categories: ["Websites", "Graphics Design"],
+      image: "/assest/Portfolio/29.png",
+      categories: ["Mobile apps"],
       gridClass: "col-span-1 row-span-1 ",
-      title: "Creative Agency Website",
-      description: "A modern website showcasing creative work with custom animations and interactive elements.",
-      client: "ArtisticVisions Co.",
-      technology: "Next.js, Tailwind CSS, GSAP",
+      title: "Team unity",
+      description:
+        "A versatile mobile e-commerce app for groceries and electronics.",
+      client: "Rohit shelar",
+      technology: "Flutter, Dart, asp.net, c#",
       duration: "2 months",
       projectImages: [
-        "/assest/Portfolio/website/img3.svg",
-        "/assest/Portfolio/app/img1.svg",
-        "/assest/Portfolio/website/img4.svg"
-      ]
+        "/assest/Portfolio/21.png",
+        "/assest/Portfolio/11.png",
+        "/assest/Portfolio/29.png",
+      ],
     },
     {
       id: 3,
-      image: "/assest/Portfolio/app/img1.svg",
-      categories: ["Graphics Design"],
+      image: "/assest/Portfolio/18.png",
+      categories: ["Mobile apps "],
       gridClass: "col-span-1 row-span-1",
-      title: "Brand Identity Package",
-      description: "Complete brand identity design including logo, color palette, typography, and brand guidelines.",
-      client: "GreenLife Organics",
-      technology: "Adobe Creative Suite, Figma",
-      duration: "1.5 months",
+      title: "Z-bazzar",
+      description:
+        "A secure and efficient payment app for hassle-free transactions.",
+      client: "Vikas dubey",
+      technology: "Flutter , Dart , php, laravel ",
+      duration: "6 months (on going)",
       projectImages: [
-        "/assest/Portfolio/app/img1.svg",
-        "/assest/Portfolio/app/img5.svg",
-        "/assest/Portfolio/app/img4.svg"
-      ]
+        "/assest/Portfolio/10.png",
+        "/assest/Portfolio/13.png",
+        "/assest/Portfolio/18.png",
+      ],
     },
     {
       id: 4,
-      image: "/assest/Portfolio/app/img5.svg",
-      categories: ["Graphics Design"],
+      image: "/assest/Portfolio/web/1.png",
+      categories: ["Websites"],
       gridClass: "col-span-1 row-span-1",
       title: "Product Packaging Design",
-      description: "Premium packaging design for consumer electronics with sustainable materials.",
+      description:
+        "Premium packaging design for consumer electronics with sustainable materials.",
       client: "EcoTech Gadgets",
       technology: "Adobe Illustrator, Photoshop, Blender",
       duration: "1 month",
-      projectImages: [
-        "/assest/Portfolio/app/img5.svg",
-        "/assest/Portfolio/app/img3.svg",
-        "/assest/Portfolio/app/img2.svg"
-      ]
+      projectImages: ["/assest/Portfolio/web/1.png"],
     },
     {
       id: 5,
-      image: "/assest/Portfolio/website/img5.svg",
-      categories: ["Websites", "SEO"],
+      image: "/assest/Portfolio/19.png",
+      categories: ["Mobile apps"],
       gridClass: "col-span-1 row-span-1",
-      title: "SEO-Optimized Blog",
-      description: "Content-focused blog with advanced SEO implementation and content strategy.",
-      client: "HealthWise Network",
-      technology: "WordPress, Yoast SEO, Google Analytics",
-      duration: "2.5 months",
+      title: "CLICKRS",
+      description:
+        "A dynamic social media app designed for engaging and interactive experiences.",
+      client: "Ashwin maid",
+      technology: "Flutter, Dart, node js , PostgreSql",
+      duration: "4 months",
       projectImages: [
-        "/assest/Portfolio/website/img5.svg",
-        "/assest/Portfolio/website/img4.svg",
-        "/assest/Portfolio/website/img3.svg"
-      ]
+        "/assest/Portfolio/26.png",
+        "/assest/Portfolio/25.png",
+        "/assest/Portfolio/19.png",
+      ],
     },
     {
       id: 6,
-      image: "/assest/Portfolio/app/img4.svg",
-      categories: ["Graphics Design"],
+      image: "/assest/Portfolio/28.png",
+      categories: ["Mobile apps"],
       gridClass: "col-span-1 row-span-1",
-      title: "Annual Report Design",
-      description: "Visual storytelling through data visualization and infographics for annual corporate report.",
-      client: "FinTrust Group",
-      technology: "Adobe InDesign, Illustrator, Tableau",
-      duration: "3 weeks",
+      title: "Jeevandhara",
+      description:
+        "An e-commerce platform with integrated MLM features for business growth.",
+      client: "Vishwajit",
+      technology: "Flutter, Dart, Node js , PostgreSql",
+      duration: "2 months (on going)",
       projectImages: [
-        "/assest/Portfolio/app/img4.svg",
-        "/assest/Portfolio/app/img3.svg",
-        "/assest/Portfolio/app/img2.svg"
-      ]
+        "/assest/Portfolio/20.png",
+        "/assest/Portfolio/4.png",
+        "/assest/Portfolio/28.png",
+      ],
     },
     {
       id: 7,
-      image: "/assest/Portfolio/app/img3.svg",
-      categories: ["Graphics Design"],
+      image: "/assest/Portfolio/31.png",
+      categories: ["Mobile apps"],
       gridClass: "col-span-1 row-span-1",
-      title: "Event Promotion Materials",
-      description: "Complete set of promotional materials for a major tech conference including digital and print media.",
+      title: "School app",
+      description:
+        "A comprehensive school management solution for efficient administration.",
       client: "TechSummit Events",
-      technology: "Adobe Creative Suite, Canva Pro",
+      technology: "Flutter, Dart, node , sql",
       duration: "1 month",
       projectImages: [
-        "/assest/Portfolio/app/img3.svg",
-        "/assest/Portfolio/app/img4.svg",
-        "/assest/Portfolio/app/img5.svg"
-      ]
+        "/assest/Portfolio/32.png",
+        "/assest/Portfolio/33.png",
+        "/assest/Portfolio/34.png",
+      ],
     },
     {
       id: 8,
-      image: "/assest/Portfolio/app/img2.svg",
-      categories: ["Mobile apps"],
+      image: "/assest/Portfolio/web/2.png",
+      categories: ["Websites"],
       gridClass: "col-span-1 row-span-1",
-      title: "Fitness Tracking App",
-      description: "Mobile application for fitness tracking with social features and personalized workout plans.",
+      title: "Prasad Hospital",
+      description: "web application for hospital landing page",
       client: "FitLife Solutions",
-      technology: "React Native, Firebase, HealthKit",
-      duration: "4 months",
-      projectImages: [
-        "/assest/Portfolio/app/img2.svg",
-        "/assest/Portfolio/app/img1.svg",
-        "/assest/Portfolio/app/img3.svg"
-      ]
+      technology: "Php",
+      duration: "1 months",
+      projectImages: ["/assest/Portfolio/web/2.png"],
     },
-    {
-      id: 9,
-      image: "/assest/Portfolio/website/img4.svg",
-      categories: ["Websites", "Social media Branding"],
-      gridClass: "col-span-1 row-span-1",
-      title: "Social Media Campaign",
-      description: "Integrated social media campaign across multiple platforms with cohesive visual identity.",
-      client: "Urban Fashion Collective",
-      technology: "Adobe Photoshop, After Effects, Meta Business Suite",
-      duration: "2 months",
-      projectImages: [
-        "/assest/Portfolio/website/img4.svg",
-        "/assest/Portfolio/website/img5.svg",
-        "/assest/Portfolio/app/img5.svg"
-      ]
-    },
+  
   ];
 
   // Handle category change with smooth transition
   const handleCategoryChange = (category) => {
     if (category === activeCategory) return;
-    
+
     setIsTransitioning(true);
-    
+
     // Wait for fade-out animation to complete
     setTimeout(() => {
       setActiveCategory(category);
       // Get filtered items based on new category
-      const newFilteredItems = category === "All"
-        ? portfolioItems
-        : portfolioItems.filter((item) => item.categories.includes(category));
-      
+      const newFilteredItems =
+        category === "All"
+          ? portfolioItems
+          : portfolioItems.filter((item) => item.categories.includes(category));
+
       setVisibleItems(newFilteredItems);
-      
+
       // Wait a bit before starting the fade-in animation
       setTimeout(() => {
         setIsTransitioning(false);
@@ -193,11 +178,11 @@ const PortfolioComponent = () => {
   // Initialize visible items on component mount and trigger initial animations
   useEffect(() => {
     setVisibleItems([]);
-    
+
     // Delay the initial animation for a smoother page load experience
     setTimeout(() => {
       setIsLoaded(true);
-      
+
       // Stagger the appearance of portfolio items
       setTimeout(() => {
         setVisibleItems(portfolioItems);
@@ -209,26 +194,26 @@ const PortfolioComponent = () => {
   const openProjectDialog = (project) => {
     setSelectedProject(project);
     setCurrentImageIndex(0);
-    document.body.style.overflow = 'hidden'; // Prevent scrolling when dialog is open
+    document.body.style.overflow = "hidden"; // Prevent scrolling when dialog is open
   };
 
   // Close project dialog
   const closeProjectDialog = () => {
     setSelectedProject(null);
-    document.body.style.overflow = 'auto'; // Re-enable scrolling
+    document.body.style.overflow = "auto"; // Re-enable scrolling
   };
 
   // Handle image navigation
   const nextImage = () => {
     if (!selectedProject) return;
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === selectedProject.projectImages.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevImage = () => {
     if (!selectedProject) return;
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? selectedProject.projectImages.length - 1 : prevIndex - 1
     );
   };
@@ -236,30 +221,35 @@ const PortfolioComponent = () => {
   // Close dialog when clicking outside or pressing ESC
   useEffect(() => {
     const handleEscKey = (e) => {
-      if (e.key === 'Escape') closeProjectDialog();
+      if (e.key === "Escape") closeProjectDialog();
     };
 
-    window.addEventListener('keydown', handleEscKey);
-    return () => window.removeEventListener('keydown', handleEscKey);
+    window.addEventListener("keydown", handleEscKey);
+    return () => window.removeEventListener("keydown", handleEscKey);
   }, []);
 
   return (
     <div className="bg-black my-24 text-white py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Section Title with fade-in animation */}
-      <div className={`text-center mb-12 transition-all duration-700 ease-out ${
-        isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}>
+      <div
+        className={`text-center mb-12 transition-all duration-700 ease-out ${
+          isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <h3 className="text-blue-600 font-medium mb-2">Our Portfolio</h3>
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Recent Work</h2>
         <p className="text-[#8E8F92] max-w-2xl mx-auto">
-          Explore our diverse portfolio showcasing our expertise across various digital domains
+          Explore our diverse portfolio showcasing our expertise across various
+          digital domains
         </p>
       </div>
-      
+
       {/* Category Filter with enhanced transitions */}
-      <div className={`flex flex-wrap items-center justify-center mb-8 space-x-2 md:space-x-4 transition-all duration-500 ease-out delay-100 ${
-        isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      }`}>
+      <div
+        className={`flex flex-wrap items-center justify-center mb-8 space-x-2 md:space-x-4 transition-all duration-500 ease-out delay-100 ${
+          isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+      >
         {categories.map((category, index) => (
           <button
             key={index}
@@ -277,18 +267,20 @@ const PortfolioComponent = () => {
       </div>
 
       {/* Portfolio Grid with fade and staggered transition */}
-      <div className={`grid grid-cols-1 md:grid-cols-3 gap-4 transition-opacity duration-500 ${
-        isTransitioning ? "opacity-0" : "opacity-100"
-      }`}>
+      <div
+        className={`grid grid-cols-1 md:grid-cols-3 gap-4 transition-opacity duration-500 ${
+          isTransitioning ? "opacity-0" : "opacity-100"
+        }`}
+      >
         {visibleItems.map((item, index) => (
           <div
             key={item.id}
             className={`${item.gridClass} overflow-hidden rounded-lg cursor-pointer group relative transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl`}
-            style={{ 
+            style={{
               opacity: isLoaded ? 1 : 0,
-              transform: isLoaded ? 'translateY(0)' : 'translateY(40px)',
+              transform: isLoaded ? "translateY(0)" : "translateY(40px)",
               transition: `opacity 0.5s ease, transform 0.5s ease`,
-              transitionDelay: `${200 + index * 100}ms`
+              transitionDelay: `${200 + index * 100}ms`,
             }}
           >
             <div className="w-full h-full overflow-hidden bg-gray-100">
@@ -302,7 +294,7 @@ const PortfolioComponent = () => {
             </div>
             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-all duration-500">
               <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                <button 
+                <button
                   className="bg-white text-black rounded-full py-2 px-4 text-sm font-medium hover:bg-blue-600 hover:text-white transition-all duration-300"
                   onClick={() => openProjectDialog(item)}
                 >
@@ -314,143 +306,156 @@ const PortfolioComponent = () => {
         ))}
       </div>
 
-    {/* Project Dialog Modal */}
-{selectedProject && (
-  <div 
-    className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in"
-    onClick={closeProjectDialog}
-  >
-    <div 
-      className="bg-gradient-to-b from-gray-900 to-black rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl transform transition-all duration-500 scale-100 opacity-100"
-      onClick={(e) => e.stopPropagation()}
-      style={{maxHeight: 'calc(100vh - 40px)'}}
-    >
-      {/* Close button */}
-      <button 
-        onClick={closeProjectDialog}
-        className="absolute top-4 right-4 bg-black/50 hover:bg-blue-600 p-2 rounded-full transition-all duration-300 z-10 shadow-lg"
-      >
-        <X size={20} className="text-white" />
-      </button>
-      
-      {/* Image slider */}
-      <div className="relative h-72 sm:h-96 md:h-96 w-full">
-        <div className="absolute inset-0">
-          {selectedProject.projectImages.map((img, idx) => (
-            <div 
-              key={idx}
-              className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                idx === currentImageIndex 
-                  ? 'opacity-100 scale-100' 
-                  : 'opacity-0 scale-105'
-              }`}
+      {/* Project Dialog Modal */}
+      {selectedProject && (
+        <div
+          className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in"
+          onClick={closeProjectDialog}
+        >
+          <div
+            className="bg-gradient-to-b from-gray-900 to-black rounded-2xl w-full overflow-hidden shadow-2xl transform transition-all duration-500 scale-100 opacity-100 flex flex-col md:flex-row"
+            onClick={(e) => e.stopPropagation()}
+            style={{ maxHeight: "calc(100vh - 40px)", maxWidth: "1200px" }}
+          >
+            {/* Close button */}
+            <button
+              onClick={closeProjectDialog}
+              className="absolute top-4 right-4 bg-black/50 hover:bg-blue-600 p-2 rounded-full transition-all duration-300 z-10 shadow-lg"
             >
-              <img
-                src={img}
-                alt={`Project image ${idx + 1}`}
-                className="w-full h-full object-cover"
-                width={1200}
-                height={800}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-50"></div>
-            </div>
-          ))}
-        </div>
-        
-        {/* Navigation arrows with improved styling */}
-        <button 
-          onClick={prevImage}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-blue-600 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
-        >
-          <ChevronLeft size={24} className="text-white group-hover:text-white" />
-        </button>
-        
-        <button 
-          onClick={nextImage}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-blue-600 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
-        >
-          <ChevronRight size={24} className="text-white group-hover:text-white" />
-        </button>
-        
-        {/* Image indicator dots */}
-        <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-3">
-          {selectedProject.projectImages.map((_, idx) => (
-            <button 
-              key={idx}
-              onClick={() => setCurrentImageIndex(idx)}
-              className={`transition-all duration-300 ${
-                idx === currentImageIndex 
-                  ? 'w-8 h-2 bg-blue-600' 
-                  : 'w-2 h-2 bg-white/50 hover:bg-white/80'
-              } rounded-full`}
-            />
-          ))}
-        </div>
-      </div>
-      
-      {/* Project information with improved styling */}
-      <div className="p-8 pb-10 overflow-y-auto scrollbar-hide" style={{maxHeight: 'calc(100vh - 40px - 24rem)'}}>
-        <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">{selectedProject.title}</h3>
-        
-        <p className="text-gray-300 mb-8 text-lg leading-relaxed">{selectedProject.description}</p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="space-y-6">
-            <div>
-              <h4 className="text-blue-500 font-semibold mb-2 flex items-center">
-                <span className="w-1 h-6 bg-blue-500 mr-2 rounded-full"></span>
-                Client
-              </h4>
-              <p className="text-gray-300 pl-3">{selectedProject.client}</p>
-            </div>
-            
-            <div>
-              <h4 className="text-blue-500 font-semibold mb-2 flex items-center">
-                <span className="w-1 h-6 bg-blue-500 mr-2 rounded-full"></span>
-                Categories
-              </h4>
-              <div className="flex flex-wrap gap-2 pl-3">
-                {selectedProject.categories.map((cat, idx) => (
-                  <span 
+              <X size={20} className="text-white" />
+            </button>
+
+            {/* Image slider - now with better proportions */}
+            <div className="relative w-full md:w-1/2 h-72 sm:h-80 md:h-auto">
+              <div className="absolute inset-0">
+                {selectedProject.projectImages.map((img, idx) => (
+                  <div
                     key={idx}
-                    className="bg-gray-800/80 text-gray-300 px-3 py-1 rounded-full border border-gray-700/50 text-sm"
+                    className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+                      idx === currentImageIndex
+                        ? "opacity-100 scale-100"
+                        : "opacity-0 scale-105"
+                    }`}
                   >
-                    {cat}
-                  </span>
+                    <img
+                      src={img}
+                      alt={`Project image ${idx + 1}`}
+                      className="w-full h-full object-cover"
+                      width={1200}
+                      height={800}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-50"></div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Navigation arrows with improved styling */}
+              <button
+                onClick={prevImage}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-blue-600 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
+              >
+                <ChevronLeft
+                  size={24}
+                  className="text-white group-hover:text-white"
+                />
+              </button>
+
+              <button
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-blue-600 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
+              >
+                <ChevronRight
+                  size={24}
+                  className="text-white group-hover:text-white"
+                />
+              </button>
+
+              {/* Image indicator dots */}
+              <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-3">
+                {selectedProject.projectImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentImageIndex(idx)}
+                    className={`transition-all duration-300 ${
+                      idx === currentImageIndex
+                        ? "w-8 h-2 bg-blue-600"
+                        : "w-2 h-2 bg-white/50 hover:bg-white/80"
+                    } rounded-full`}
+                  />
                 ))}
               </div>
             </div>
-          </div>
-          
-          <div className="space-y-6">
-            <div>
-              <h4 className="text-blue-500 font-semibold mb-2 flex items-center">
-                <span className="w-1 h-6 bg-blue-500 mr-2 rounded-full"></span>
-                Technologies
-              </h4>
-              <p className="text-gray-300 pl-3">{selectedProject.technology}</p>
-            </div>
-            
-            <div>
-              <h4 className="text-blue-500 font-semibold mb-2 flex items-center">
-                <span className="w-1 h-6 bg-blue-500 mr-2 rounded-full"></span>
-                Project Duration
-              </h4>
-              <p className="text-gray-300 pl-3">{selectedProject.duration}</p>
+
+            {/* Project information with improved styling */}
+            <div
+              className="p-6 md:p-8 pb-10 overflow-y-auto md:w-1/2"
+              style={{ maxHeight: "calc(100vh - 40px)" }}
+            >
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                {selectedProject.title}
+              </h3>
+
+              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                {selectedProject.description}
+              </p>
+
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-blue-500 font-semibold mb-2 flex items-center">
+                    <span className="w-1 h-6 bg-blue-500 mr-2 rounded-full"></span>
+                    Client
+                  </h4>
+                  <p className="text-gray-300 pl-3">{selectedProject.client}</p>
+                </div>
+
+                <div>
+                  <h4 className="text-blue-500 font-semibold mb-2 flex items-center">
+                    <span className="w-1 h-6 bg-blue-500 mr-2 rounded-full"></span>
+                    Categories
+                  </h4>
+                  <div className="flex flex-wrap gap-2 pl-3">
+                    {selectedProject.categories.map((cat, idx) => (
+                      <span
+                        key={idx}
+                        className="bg-gray-800/80 text-gray-300 px-3 py-1 rounded-full border border-gray-700/50 text-sm"
+                      >
+                        {cat}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-blue-500 font-semibold mb-2 flex items-center">
+                    <span className="w-1 h-6 bg-blue-500 mr-2 rounded-full"></span>
+                    Technologies
+                  </h4>
+                  <p className="text-gray-300 pl-3">
+                    {selectedProject.technology}
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-blue-500 font-semibold mb-2 flex items-center">
+                    <span className="w-1 h-6 bg-blue-500 mr-2 rounded-full"></span>
+                    Project Duration
+                  </h4>
+                  <p className="text-gray-300 pl-3">
+                    {selectedProject.duration}
+                  </p>
+                </div>
+              </div>
+
+              {/* Call to action button */}
+              <div className="mt-8 text-center">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 transform hover:scale-105">
+                  View Live Project
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        
-        {/* Call to action button */}
-        <div className="mt-10 text-center">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 transform hover:scale-105">
-            View Live Project
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-)}
+      )}
     </div>
   );
 };
