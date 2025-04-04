@@ -22,7 +22,7 @@ const HeroSection = () => {
   return (
     <div className=" relative mt-28  flex items-center">
       <AnimatedLines />
-      <div className="container mx-auto px-4 lg:px-10 z-10 relative">
+      <div className="container mx-auto px-4 lg:px-16 z-10 relative">
         <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-0">
           {/* Left Content */}
           <div className="lg:w-1/2 space-y-4 mt-16 md:mt-20 lg:mt-36 max-w-xl mx-auto lg:mx-0">

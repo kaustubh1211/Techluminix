@@ -81,8 +81,8 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section className="py-16 px-4 bg-black overflow-hidden">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-16 mx-auto px-4 lg:px-16 bg-black overflow-hidden">
+      <div className="container mx-auto max-w-7xl">
         {/* Section header with fade-in animation */}
         <div className={`text-center mb-12 text-white transition-all duration-700 ease-out ${
           isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"

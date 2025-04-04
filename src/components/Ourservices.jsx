@@ -2,8 +2,8 @@ import React from "react";
 
 const OurServicesSection = () => {
   return (
-    <section className="bg-black py-16 px-4  z-40 relative ">
-      <div className="max-w-6xl mx-auto ">
+    <section className="bg-black py-16 mx-auto px-4 lg:px-16 z-40 relative ">
+      <div className=" mx-auto ">
         {/* Heading */}
         <div className="text-center mb-12  ">
           <h2 className="text-white text-4xl font-bold mb-2">
