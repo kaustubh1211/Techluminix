@@ -20,7 +20,7 @@ function ParallaxBrands() {
       const totalWidth = brands.length * itemWidth;
     
       return (
-        <div className="relative overflow-hidden mx-auto px-4 lg:px-16 flex w-full h-20 bg top-10">
+        <div className="relative overflow-hidden mx-auto px-4 lg:px-32 flex w-full h-20 bg top-10">
           {/* Left Fade Effect */}
           <div className="absolute left-0 top-0 w-32 sm:w-48 md:w-[32rem] h-full bg-gradient-to-r from-black via-black to-transparent z-10" />
           

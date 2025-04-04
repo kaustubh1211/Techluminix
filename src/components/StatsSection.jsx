@@ -68,7 +68,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="w-full mx-auto px-4 lg:px-16    justify-self-center mt-24">
+    <section className="w-full mx-auto px-4 lg:px-24    justify-self-center mt-24">
       <div className="container mx-auto px-4">
         {/* Services navbar */}
          {/* Services navbar with infinite scroll animation */}

@@ -12,7 +12,7 @@ const ServiceMain = () => {
 
   return (
     <section className="py-16 md:py-24  bg-black overflow-hidden mt-36">
-      <div className="container mx-auto px-20">
+      <div className="container mx-auto px-24">
         <div className="flex flex-col md:flex-row items-center">
           {/* Left content with fade-in animation */}
           <div 

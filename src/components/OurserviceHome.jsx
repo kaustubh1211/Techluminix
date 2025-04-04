@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function OurserviceHome() {
   return (
-    <section className=" mx-auto px-4 lg:px-16      justify-self-center">
+    <section className=" mx-auto px-4 lg:px-24      justify-self-center">
     <div className="container  mx-auto px-4">
     
       {/* Header Section */}

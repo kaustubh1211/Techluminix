@@ -27,7 +27,7 @@ export default function AboutHead() {
   }, []);
 
   return (
-    <div className="bg-black mx-auto px-4 lg:px-16 text-white">
+    <div className="bg-black mx-auto px-4 lg:px-24 text-white">
       {/* Hero Section with enhanced visuals */}
       <section className="min-h-screen relative flex items-center pt-24 pb-16 overflow-hidden">
         {/* Enhanced grid background */}
