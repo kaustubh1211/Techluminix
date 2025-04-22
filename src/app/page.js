@@ -10,6 +10,7 @@ import PortfolioShowcase from "../components/PortfolioShowCase";
 import OurserviceHome from "@/components/OurserviceHome";
 // import TechStack from './components/TechStack';
 import Head from "next/head";
+import MilestonesComponent from "@/components/Milestone";
 export default function Home() {
   return (
     <>
@@ -101,7 +102,8 @@ export default function Home() {
         <Navbar />
         <Hero />
         <StatsSection />
-        <OurserviceHome />
+        {/* <OurserviceHome /> */}
+        <MilestonesComponent/>
         <PortfolioShowcase />
         <DevelopmentWorkflow />
 

@@ -26,20 +26,10 @@ const PortfolioShowcase = () => {
   ];
 
   return (
-    <div className=" py-20 md:px-24 mx-3     ">
+    <div className=" pb-20 md:px-24 mx-3     ">
       <div className=" container mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-2">
-            Our Work, Your Vision
-            <br />
-            Brought to Life
-          </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto">
-            Innovative solutions crafted with precision, creativity, and
-            performance in mind.
-          </p>
-        </div>
+      
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
