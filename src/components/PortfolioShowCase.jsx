@@ -14,7 +14,7 @@ const PortfolioShowcase = () => {
     {
       id: 2,
       name: "Zedpay",
-      image: "/assest/Portfolio/zpay.svg",
+      image: "/assest/portfolio/zpay.svg",
       description: "Scalable, high-performance mobile solutions.",
     },
     {
