@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const DarkContactHero = () => {
   return (
-    <div className=" relative min-h-screen w-full bg-gradient-to-b flex flex-col items-center justify-center p-4">
+    <div className=" relative min-h-screen w-full bg-gradient-to-b flex flex-col items-center justify-center p-4 py-10">
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-black opacity-10" />
       <div className="absolute inset-0 overflow-hidden  ">

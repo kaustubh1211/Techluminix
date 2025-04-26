@@ -5,9 +5,10 @@ import Script from 'next/script';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
+  
+    name: '',
     email: '',
-    phone: '',
+    mobile: '',
     subject: '',
     message: '',
   });
@@ -24,25 +25,63 @@ const ContactUs = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    const data = await res.json();
-    if (data.success) {
-      setStatus("✅ Message Sent Successfully!");
-      setFormData({ firstName: "", email: "", phone: "", subject: "", message: "" });
-    } else {
-      setStatus("❌ Error Sending Message.");
+    if (!window.grecaptcha) {
+      setStatus('❌ reCAPTCHA not loaded')
+      return
     }
-  };
+
+    // 1) Get a fresh reCAPTCHA v3 token
+    window.grecaptcha.ready(() => {
+      window.grecaptcha
+        .execute('6LeIdw4qAAAAAJOwjBqnSsOuwHPq9Lb8lvFTuWaP', { action: 'submit' })
+        .then(async (token) => {
+          // 2) Build the inner URL-encoded payload (your form fields + token)
+          const inner = new URLSearchParams({
+            'g-recaptcha-response': token,
+            name: formData.name,
+            email: formData.email,
+            mobile: formData.phone,
+            subject: formData.subject,
+            message: formData.message
+          }).toString()
+
+          // 3) Wrap it exactly like your PHP expects: ssd=yes & data=<inner>
+          const body = new URLSearchParams({
+            ssd: 'yes',
+            data: inner
+          }).toString()
+
+          try {
+            const res = await fetch('https://techluminix.com/src/api/post.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body
+            })
+
+            const json = await res.json() // your PHP returns JSON
+            if (json.success) {
+              setStatus('✅ Message Sent Successfully!')
+              setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+            } else {
+              console.error('Server error:', json)
+              setStatus('❌ Error Sending Message.')
+            }
+          } catch (err) {
+            console.error(err)
+            setStatus('❌ Network Error.')
+          }
+        })
+    })
+  }
 
   return (
     <div className="bg-black  text-white mt-12">
+      <Script
+      src="https://www.google.com/recaptcha/api.js?render=6LeIdw4qAAAAAJOwjBqnSsOuwHPq9Lb8lvFTuWaP"
+      strategy="beforeInteractive"
+    />
       <div className="max-w-7xl mx-auto py-16 px-4 md:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-blue-500 mb-2">Contact us</p>
@@ -68,8 +107,8 @@ const ContactUs = () => {
                 <input
                   type="text"
                   id="firstName"
-                  name="firstName"
-                  value={formData.firstName}
+                  name="name"
+                  value={formData.name}
                   onChange={handleChange}
                   placeholder="Sunny"
                   className="w-full p-3 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -104,8 +143,8 @@ const ContactUs = () => {
                 <input
                   type="tel"
                   id="phone"
-                  name="phone"
-                  value={formData.phone}
+                  name="mobile"
+                  value={formData.mobile}
                   onChange={handleChange}
                   placeholder="9999220403"
                   className="w-full p-3 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"

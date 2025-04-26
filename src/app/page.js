@@ -102,8 +102,8 @@ export default function Home() {
         <Navbar />
         <Hero />
         <StatsSection />
-        {/* <OurserviceHome /> */}
-        <MilestonesComponent/>
+        <OurserviceHome />
+        {/* <MilestonesComponent/> */}
         <PortfolioShowcase />
         <DevelopmentWorkflow />
 

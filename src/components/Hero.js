@@ -63,16 +63,14 @@ const HeroSection = () => {
               <img
                       src="assest/Hero/apple-screen.svg"
                       alt="icon"
-                      className=" w-80  md:mt-52 h-56"
+                      className=" w-80 relative md:mt-52 h-56"
                       width={800}
                       height={800}
                     />
 
               {/* cart 2 - unchanged */}
               <div className="relative md:w-[346px] h-[300px] md:h-[387px] rounded-lg shadow-xl">
-                {/* Card background */}
-                <div className="absolute inset-0 bg rounded-lg bg"></div>
-                <div className="absolute inset-0 rounded-lg "></div>
+ 
 
                 {/* Browser dots */}
                 {/* <div className="absolute top-3 left-3 flex space-x-1">
@@ -86,24 +84,24 @@ const HeroSection = () => {
                   {/* Blue background area */}
                   <div
                     className="relative mt-4 mb-6 overflow-hidden"
-                    // style={{
-                    //   backgroundImage:
-                    //     "linear-gradient(to right bottom, #3770ED80 0%, #3770ED80 10%, #D3E1FF 35% , white 50% )",
-                    // }}
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(to right bottom, #3770ED80 0%, #3770ED80 10%, #D3E1FF 35% , white 50% )",
+                    }}
                   >
                     <div
                       className="absolute inset-0"
-              //         style={{
-              //           backgroundImage: `
-              //   linear-gradient(to right, rgba(156, 163, 175, 0.2) 1px, transparent 1px),
-              //   linear-gradient(to bottom, rgba(156, 163, 175, 0.2) 1px, transparent 1px)
-              // `,
-              //           backgroundSize: "1.5rem 1.5rem",
-              //           mask: "radial-gradient(ellipse at left, black 40%, transparent 70%)",
-              //           WebkitMask:
-              //             "radial-gradient(ellipse at left, black 40%, transparent 70%)",
-              //           filter: "drop-shadow(0 0 1px rgba(156, 163, 175, 0.1))",
-              //         }}
+                      style={{
+                        backgroundImage: `
+                linear-gradient(to right, rgba(156, 163, 175, 0.2) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(156, 163, 175, 0.2) 1px, transparent 1px)
+              `,
+                        backgroundSize: "1.5rem 1.5rem",
+                        mask: "radial-gradient(ellipse at left, black 40%, transparent 70%)",
+                        WebkitMask:
+                          "radial-gradient(ellipse at left, black 40%, transparent 70%)",
+                        filter: "drop-shadow(0 0 1px rgba(156, 163, 175, 0.1))",
+                      }}
                     />
 
                     <img

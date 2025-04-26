@@ -4,56 +4,56 @@ import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
   {
-    name: "Agnes Remi",
-    role: "Back-end developer at MyDodow",
-    image: "/api/placeholder/64/64",
-    content: "Dico is finally addressing a long time problem we had when building UIs. It's ease of use and workflow seems really intuitive. Promising!"
+    name: "Chirag Pendulkar",
+    role: "",
+    image: "/assest/testimonals/chirag.svg",
+    content: "Every project was completed on time and within the agreed budget. They were transparent throughout the process, keeping us informed at every step."
   },
   {
-    name: "Martin Goutry",
-    role: "Back-end developer at MyDodow",
-    image: "/api/placeholder/64/64",
-    content: "Dico is finally addressing a long time problem we had when building UIs. It's ease of use and workflow seems really intuitive. Promising!"
+    name: "Sonya Mkrtchyan",
+    role: "Freelancer",
+    image: "/assest/testimonals/sonya.svg",
+    content: "Excellent communication and skills. recommend!"
   },
   {
-    name: "Theo Champion",
-    role: "Back-end developer at MyDodow",
-    image: "/api/placeholder/64/64",
-    content: "Dico is finally addressing a long time problem we had when building UIs. It's ease of use and workflow seems really intuitive. Promising!"
+    name: "Dennis Gerten",
+    role: "Project Manager @Insurensa",
+    image: "/assest/testimonals/dennies.svg",
+    content: "If you want your stuff do be done really good, super fast, extremely effective, absolutely reliable and with kreative input: then THIS IS YOUR MAN !!!!!!!!!!!!!!!!!!!!"
   },
   {
-    name: "Roman Atwoods",
-    role: "Back-end developer at MyDodow",
-    image: "/api/placeholder/64/64",
-    content: "Dico is finally addressing a long time problem we had when building UIs. It's ease of use and workflow seems really intuitive. Promising!"
+    name: "Ramesh Subburaj",
+    role: "CEO @Cross Hurdles Systems",
+    image: "/assest/testimonals/siva.svg",
+    content: "Delivers such a great service that it can benefit all kinds of people from any number of industries."
   }
 ];
 const testimonials2 = [
-    {
-        name: "Roman Atwoods",
-        role: "Back-end developer at MyDodow",
-        image: "/api/placeholder/64/64",
-        content: "Dico is finally addressing a long time problem we had when building UIs. It's ease of use and workflow seems really intuitive. Promising!"
-    },
-    {
-        name: "Martin Goutry",
-        role: "Back-end developer at MyDodow",
-        image: "/api/placeholder/64/64",
-        content: "Dico is finally addressing a long time problem we had when building UIs. It's ease of use and workflow seems really intuitive. Promising!"
-    },
-    {
-      name: "Agnes Remi",
-      role: "Back-end developer at MyDodow",
-      image: "/api/placeholder/64/64",
-      content: "Dico is finally addressing a long time problem we had when building UIs. It's ease of use and workflow seems really intuitive. Promising!"
-    },
-    {
-      name: "Theo Champion",
-      role: "Back-end developer at MyDodow",
-      image: "/api/placeholder/64/64",
-      content: "Dico is finally addressing a long time problem we had when building UIs. It's ease of use and workflow seems really intuitive. Promising!"
-    },
-  ];
+  {
+    name: "Ramesh Subburaj",
+    role: "CEO @Cross Hurdles Systems",
+    image: "/assest/testimonals/siva.svg",
+    content: "Delivers such a great service that it can benefit all kinds of people from any number of industries."
+  },
+  {
+    name: "Chirag Pendulkar",
+    role: "",
+    image: "/assest/testimonals/chirag.svg",
+    content: "Every project was completed on time and within the agreed budget. They were transparent throughout the process, keeping us informed at every step."
+  },
+  {
+    name: "Dennis Gerten",
+    role: "Project Manager @Insurensa",
+    image: "/assest/testimonals/dennies.svg",
+    content: "If you want your stuff do be done really good, super fast, extremely effective, absolutely reliable and with kreative input: then THIS IS YOUR MAN !!!!!!!!!!!!!!!!!!!!"
+  },
+  {
+    name: "Sonya Mkrtchyan",
+    role: "Freelancer",
+    image: "/assest/testimonals/sonya.svg",
+    content: "Excellent communication and skills. recommend!"
+  },
+];
 
 const TestimonialCard = ({ testimonial }) => (
   <div className="w-[350px] md:w-[400px] p-6 bg-[#131316] rounded-xl mx-4 flex-shrink-0">

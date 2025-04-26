@@ -8,28 +8,38 @@ const PortfolioShowcase = () => {
     {
       id: 1,
       name: "ZBazaar",
-      image: "/assest/Portfolio/Zbajar.png",
+      image: "/assest/portfolio/zbazar.svg",
       description: "Scalable, high-performance mobile solutions.",
     },
     {
       id: 2,
       name: "Zedpay",
-      image: "/assest/Portfolio/Zpay.png",
+      image: "/assest/Portfolio/zpay.svg",
       description: "Scalable, high-performance mobile solutions.",
     },
     {
       id: 3,
       name: "Clickrs",
-      image: "/assest/Portfolio/Clicker.png",
+      image: "/assest/portfolio/Clicker.svg",
       description: "Scalable, high-performance mobile solutions.",
     },
   ];
 
   return (
-    <div className=" pb-20 md:px-24 mx-3     ">
+    <div className=" py-20 md:px-24 mx-3     ">
       <div className=" container mx-auto">
         {/* Header Section */}
-      
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-2">
+            Our Work, Your Vision
+            <br />
+            Brought to Life
+          </h2>
+          <p className="text-gray-500 max-w-2xl mx-auto">
+            Innovative solutions crafted with precision, creativity, and
+            performance in mind.
+          </p>
+        </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

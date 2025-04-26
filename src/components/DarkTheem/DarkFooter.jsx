@@ -73,7 +73,7 @@ const DarkFooter = () => {
               <h3 className="font-semibold text-lg mb-4">Our Products</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-blue-500">
+                  <a href="https://luminpay.in/" target="_blank"className="text-gray-400 hover:text-blue-500">
                     Luminpay
                   </a>
                 </li>
@@ -83,7 +83,7 @@ const DarkFooter = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-blue-500">
+                  <a href="https://ad-vik.com/" target="_blank" className="text-gray-400 hover:text-blue-500">
                     Ad-Vik
                   </a>
                 </li>
@@ -95,29 +95,29 @@ const DarkFooter = () => {
               <h3 className="font-semibold text-lg mb-4">Menu</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-blue-500">
+                  <Link href="/" className="text-gray-400 hover:text-blue-500">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-blue-500">
+                  <Link href="/about" className="text-gray-400 hover:text-blue-500">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-blue-500">
+                  <Link href="/portfolio" className="text-gray-400 hover:text-blue-500">
                     Portfolio
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-blue-500">
+                  <Link href="/services" className="text-gray-400 hover:text-blue-500">
                     Service
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-blue-500">
+                  <Link href="/contact" className="text-gray-400 hover:text-blue-500">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -127,12 +127,12 @@ const DarkFooter = () => {
               <h3 className="font-semibold text-lg mb-4">Support</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-blue-500">
+                  <a    href="tel:9226057563" className="text-gray-400 hover:text-blue-500">
                     Contact
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-blue-500">
+                  <a href="mailto:info@techluminix.com" className="text-gray-400 hover:text-blue-500">
                     Email
                   </a>
                 </li>

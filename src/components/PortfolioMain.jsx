@@ -9,7 +9,7 @@ const PortfolioComponent = () => {
     "Websites",
     "Mobile apps",  
     "Social media Branding",
-    "Graphics Design",
+
     "SEO",
   ];
   const [activeCategory, setActiveCategory] = useState("All");
@@ -22,131 +22,240 @@ const PortfolioComponent = () => {
   // Extended portfolio items with more details
   const portfolioItems = [
     {
-      id: 1,
-      image: "/assest/Mockups/1.jpg",
-      categories: ["Mobile apps"],
-      gridClass: "col-span-1 row-span-1",
-      title: "Match deals",
-      description:
-        "A feature-rich real estate mobile app for seamless property buying and selling.",
-      client: "Azim saboowala",
-      technology: "Flutter, Dart, asp.net, c#",
-      duration: "2 months",
-      projectImages: [
+      "id": 12,
+      "image": "/assest/Mockups/app/Zp - 6.jpg",
+      "categories": ["Mobile apps" ,"Social media Branding"],
+      "gridClass": "col-span-1 row-span-1",
+      "title": "Zed Pay: Recharge, Bill Payment",
+      "description": "A utility payment platform offering mobile recharges, DTH/DATV top‑ups, and bill settlements—all with attractive cashback offers. The app integrates secure wallets, multiple payment gateways, and transaction histories for easy expense tracking.",
+      "client": "Vikas Dubey",
+      "technology": "Flutter · Firebase · Laravel · PHP · MySQL",
+      "duration": "2 Months Development + Ongoing Service",
+      "link": "https://play.google.com/store/apps/details?id=com.zfintech.zedpay&hl=en_IN",
+      "projectImages": ["/assest/Mockups/app/Zp - 6.jpg",
+        "/assest/Mockups/app/Zp - 5.jpg",
+        "/assest/Mockups/app/Zp - 7.jpg",
+        "/assest/Mockups/app/Zp - 8.jpg",
+        "/assest/Mockups/app/Zp - 9.jpg",
+        "/assest/Mockups/app/Zp - 10.jpg"
+      ]
+    },
+    {
+      "id": 1,
+      "image": "/assest/Mockups/1.jpg",
+      "categories": ["Mobile apps"],
+      "gridClass": "col-span-1 row-span-1",
+      "title": "Match deals",
+      "description": "A feature-rich real estate mobile app for seamless property buying and selling.",
+      "client": "Azim saboowala",
+      "technology": "Flutter, Dart, asp.net, c#",
+      "duration": "2 months",
+      "projectImages": [
         "/assest/Mockups/7.jpg",
         "/assest/Mockups/24.jpg",
-        "/assest/Mockups/1.jpg",
-      ],
+        "/assest/Mockups/1.jpg"
+      ]
     },
     {
-      id: 2,
-      image: "/assest/Mockups/29.jpg",
-      categories: ["Mobile apps"],
-      gridClass: "col-span-1 row-span-1 ",
-      title: "Team unity",
-      description:
-        "A versatile mobile e-commerce app for groceries and electronics.",
-      client: "Rohit shelar",
-      technology: "Flutter, Dart, asp.net, c#",
-      duration: "2 months",
-      projectImages: [
+      "id": 2,
+      "image": "/assest/Mockups/29.jpg",
+      "categories": ["Mobile apps"],
+      "gridClass": "col-span-1 row-span-1 ",
+      "title": "Team unity",
+      "description": "A versatile mobile e-commerce app for groceries and electronics.",
+      "client": "Rohit shelar",
+      "technology": "Flutter, Dart, asp.net, c#",
+      "duration": "2 months",
+      "projectImages": [
         "/assest/Mockups/21.jpg",
         "/assest/Mockups/11.jpg",
-        "/assest/Mockups/29.jpg",
-      ],
+        "/assest/Mockups/29.jpg"
+      ]
     },
     {
-      id: 3,
-      image: "/assest/Mockups/18.jpg",
-      categories: ["Mobile apps "],
-      gridClass: "col-span-1 row-span-1",
-      title: "Z-bazzar",
-      description:
-        "A secure and efficient payment app for hassle-free transactions.",
-      client: "Vikas dubey",
-      technology: "Flutter , Dart , php, laravel ",
-      duration: "6 months (on going)",
-      projectImages: [
+      "id": 3,
+      "image": "/assest/Mockups/18.jpg",
+      "categories": ["Mobile apps "],
+      "gridClass": "col-span-1 row-span-1",
+      "title": "Zbazaar – Shop, Earn & Smile",
+      "description": "A Flutter‑based e‑commerce app with a built‑in affiliate program. Shoppers earn rewards and cashback on purchases, while affiliates can track referrals, commissions, and performance metrics through a dedicated dashboard.",
+      "client": "Vikas Dubey",
+      "technology": "Flutter · Firebase · Laravel · PHP · MySQL",
+      "duration": "6 Months Development + Ongoing Service",
+      "link": "https://play.google.com/store/apps/details?id=com.zbazaarsolutions.zbazaar&hl=en_IN",
+      "projectImages": [
         "/assest/Mockups/10.jpg",
         "/assest/Mockups/13.jpg",
-        "/assest/Mockups/18.jpg",
-      ],
+        "/assest/Mockups/18.jpg"
+      ]
     },
+    // {
+    //   "id": 4,
+    //   "image": "/assest/web/1.png",
+    //   "categories": ["Websites", "SEO"],
+    //   "gridClass": "col-span-1 row-span-1",
+    //   "title": "Product Packaging Design",
+    //   "description": "Premium packaging design for consumer electronics with sustainable materials.",
+    //   "client": "EcoTech Gadgets",
+    //   "technology": "Adobe Illustrator, Photoshop, Blender",
+    //   "duration": "1 month",
+    //   "projectImages": ["/assest/web/1.png"]
+    // },
     {
-      id: 4,
-      image: "/assest/Portfolio/web/1.png",
-      categories: ["Websites"],
-      gridClass: "col-span-1 row-span-1",
-      title: "Product Packaging Design",
-      description:
-        "Premium packaging design for consumer electronics with sustainable materials.",
-      client: "EcoTech Gadgets",
-      technology: "Adobe Illustrator, Photoshop, Blender",
-      duration: "1 month",
-      projectImages: ["/assest/Portfolio/web/1.png"],
-    },
-    {
-      id: 5,
-      image: "/assest/Mockups/19.jpg",
-      categories: ["Mobile apps"],
-      gridClass: "col-span-1 row-span-1",
-      title: "CLICKRS",
-      description:
-        "A dynamic social media app designed for engaging and interactive experiences.",
-      client: "Ashwin maid",
-      technology: "Flutter, Dart, node js , PostgreSql",
-      duration: "4 months",
-      projectImages: [
+      "id": 5,
+      "image": "/assest/Mockups/19.jpg",
+      "categories": ["Mobile apps"],
+      "gridClass": "col-span-1 row-span-1",
+      "title": "CLICKRS- LIKE · SHARE · EARN",
+      "description": "A social media platform where content creators can publish posts, engage followers, and monetize their work. Features include in‑app rewards, ad revenue sharing, analytics dashboards, and decentralized storage via StorJ for media assets",
+      "client": "Ashvin Maid",
+      "technology": "Flutter · Firebase · Node.js · TypeScript · PostgreSQL · StorJ",
+      "duration": "9 Months (Ongoing)",
+      "link": "https://play.google.com/store/apps/details?id=com.clickrs.app&hl=en_IN",
+      "projectImages": [
         "/assest/Mockups/26.jpg",
-        "/assest/Mockups/25.jpg",
-        "/assest/Mockups/19.jpg",
-      ],
+        "/assest/Mockups/19.jpg"
+      ]
     },
     {
-      id: 6,
-      image: "/assest/Mockups/28.jpg",
-      categories: ["Mobile apps"],
-      gridClass: "col-span-1 row-span-1",
-      title: "Jeevandhara",
-      description:
-        "An e-commerce platform with integrated MLM features for business growth.",
-      client: "Vishwajit",
-      technology: "Flutter, Dart, Node js , PostgreSql",
-      duration: "2 months (on going)",
-      projectImages: [
+      "id": 6,
+      "image": "/assest/Mockups/28.jpg",
+      "categories": ["Mobile apps"],
+      "gridClass": "col-span-1 row-span-1",
+      "title": "Jeevandhara Digital – Shop, Pay",
+      "description": "A comprehensive mobile app that lets users browse and purchase a wide range of electronic products, manage utility connections, and pay bills seamlessly. Features include secure in‑app payments, order tracking, and instant notifications for due dates and offers.",
+      "client": "Vishwajeet Patel",
+      "technology": "Flutter · Firebase · Node.js · TypeScript · PostgreSQL · Docker",
+      "duration": "3 Months Development + Ongoing Service",
+      "link": "https://play.google.com/store/apps/details?id=com.jeevandhara.app&hl=en_IN",
+      "projectImages": [
         "/assest/Mockups/20.jpg",
         "/assest/Mockups/4.jpg",
-        "/assest/Mockups/28.jpg",
-      ],
+        "/assest/Mockups/28.jpg"
+      ]
+    },
+    // {
+    //   "id": 7,
+    //   "image": "/assest/Mockups/31.jpg",
+    //   "categories": ["Mobile apps"],
+    //   "gridClass": "col-span-1 row-span-1",
+    //   "title": "School app",
+    //   "description": "A comprehensive school management solution for efficient administration.",
+    //   "client": "TechSummit Events",
+    //   "technology": "Flutter, Dart, node , sql",
+    //   "duration": "1 month",
+    //   "projectImages": [
+    //     "/assest/Mockups/32.jpg",
+    //     "/assest/Mockups/33.jpg",
+    //     "/assest/Mockups/34.jpg"
+    //   ]
+    // },
+    {
+      "id": 15,
+      "image": "/assest/Mockups/SVN/SVN -1.jpg",
+      "categories": ["Mobile apps","Social media Branding"],
+      "gridClass": "col-span-1 row-span-1",
+      "title": "SVN PAY: Easy Bill Payments",
+      "description": "A feature‑rich mobile app that streamlines utility and bill payments, offering users significant cashback incentives on every transaction. Includes secure wallet integration, multiple payment gateways, real‑time transaction tracking, and reminders for upcoming due dates.",
+      "client": "Sunil Kumar",
+      "technology": "Flutter · Firebase · Node.js · Express.js · TypeScript · Prisma · MySQL",
+      "duration": "4 Months Development + Ongoing Service",
+      "link": "https://play.google.com/store/apps/details?id=com.svnapl.pay&hl=en_IN",
+      "projectImages": ["/assest/Mockups/SVN/SVN - 3.jpg",
+        "/assest/Mockups/SVN/SVN -2.jpg",
+        "/assest/Mockups/SVN/SVN -4.jpg"
+      ]
     },
     {
-      id: 7,
-      image: "/assest/Mockups/31.jpg",
-      categories: ["Mobile apps"],
-      gridClass: "col-span-1 row-span-1",
-      title: "School app",
-      description:
-        "A comprehensive school management solution for efficient administration.",
-      client: "TechSummit Events",
-      technology: "Flutter, Dart, node , sql",
-      duration: "1 month",
-      projectImages: [
-        "/assest/Mockups/32.jpg",
-        "/assest/Mockups/33.jpg",
-        "/assest/Mockups/34.jpg",
-      ],
+      "id": 8,
+      "image": "/assest/web/2.png",
+      "categories": ["Websites", "SEO"],
+      "gridClass": "col-span-1 row-span-1",
+      "title": "Prasad Surgical Hospital",
+      "description": "A responsive website for Prasad Surgical Hospital, featuring doctor profiles, department overviews, and an online appointment booking system. Includes SMS/email confirmations, calendar integration, and a contact portal for patient inquiries.",
+      "client": "Dr. Prem Parkash",
+      "technology": "PHP · MySQL · HTML · CSS · JavaScript",
+      "duration": "1 month",
+      "link": "https://www.prasadsurgicalhospital.com/",
+      "projectImages": [
+        "/assest/Mockups/Wbsite/doc 2.png",
+        "/assest/Mockups/Wbsite/doc -1.png",
+        "/assest/web/2.png"]
     },
+    // {
+    //   "id": 9,
+    //   "image": "/assest/Mockups/35.jpg",
+    //   "categories": ["ERP System", "Website"],
+    //   "gridClass": "col-span-1 row-span-1",
+    //   "title": "Smart School Management System",
+    //   "description": "An end‑to‑end ERP solution designed for schools, covering student admissions, fee collection, inquiry handling, examination scheduling and grading, attendance tracking, and parent‑teacher communications. Includes an intuitive dashboard for administrators and portals for teachers, students, and parents.",
+    //   "client": "Divyaprakash Jha",
+    //   "technology": "React.js · Node.js · TypeScript · PostgreSQL · Docker · Prisma",
+    //   "duration": "6 Months Development + Ongoing Service",
+    //   "link": "https://smart-school-frontend-khaki.vercel.app/",
+    //   "projectImages": ["/assest/Mockups/35.jpg"]
+    // },
     {
-      id: 8,
-      image: "/assest/Portfolio/web/2.png",
-      categories: ["Websites"],
-      gridClass: "col-span-1 row-span-1",
-      title: "Prasad Hospital",
-      description: "web application for hospital landing page",
-      client: "FitLife Solutions",
-      technology: "Php",
-      duration: "1 months",
-      projectImages: ["/assest/Portfolio/web/2.png"],
+      "id": 10,
+      "image": "/assest/Mockups/Wbsite/path 1.png",
+      "categories": ["Websites","SEO"],
+      "gridClass": "col-span-1 row-span-1",
+      "title": "AcePathology",
+      "description": "A dedicated e‑learning platform for pathologists to explore, purchase, and access specialized courses. Features include course previews, secure payment integration, progress tracking, and downloadable resources to support continuing medical education.",
+      "client": "Dr. Akshay Agarwal",
+      "technology": "PHP · MySQL · HTML · CSS · JavaScript",
+      "duration": "1 Month",
+      "link": "https://acepathology.co.in/",
+      "projectImages": ["/assest/Mockups/Wbsite/path 2.png",
+        "/assest/Mockups/Wbsite/patho 3.png",
+        "/assest/Mockups/Wbsite/path 1.png"
+      ]
+    },
+    // {
+    //   "id": 11,
+    //   "image": "/assest/Mockups/Wbsite/ 1.png",
+    //   "categories": ["Website"],
+    //   "gridClass": "col-span-1 row-span-1",
+    //   "title": "Patholist",
+    //   "description": "A community‑driven platform where pathologists can host, share, and discover live and recorded educational sessions. Includes scheduling tools, speaker profiles, and a searchable library of past meetings to foster ongoing professional collaboration.",
+    //   "client": "Dr. Akshay Agarwal",
+    //   "technology": "PHP · MySQL · HTML · CSS · JavaScript",
+    //   "duration": "1 Month",
+    //   "link": "https://patholist.com/",
+    //   "projectImages": [
+    //     "/assest/Mockups/Wbsit.png",
+        
+    //   ]
+    // },
+
+    // {
+    //   "id": 13,
+    //   "image": "/assest/Mockups/39.jpg",
+    //   "categories": ["ERP System", "Website"],
+    //   "gridClass": "col-span-1 row-span-1",
+    //   "title": "Society Management System",
+    //   "description": "A full‑featured society management ERP offering resident and committee portals for event planning, maintenance requests, visitor logs, payment tracking, and announcement broadcasts. Designed for ease of use with a responsive UI and customizable modules.",
+    //   "client": "TechLuminix Private Limited",
+    //   "technology": "Figma · Next.js · MySQL",
+    //   "duration": "3 Months (Ongoing)",
+    //   "link": null,
+    //   "projectImages": ["/assest/Mockups/39.jpg"]
+    // },
+    {
+      "id": 14,
+      "image": "/assest/Mockups/Wbsite/Phasor.png",
+      "categories": ["Websites","SEO"],
+      "gridClass": "col-span-1 row-span-1",
+      "title": "Phasor Academy",
+      "description": "A multi‑branch educational institute’s website showcasing courses, faculty profiles, campus locations, and an online inquiry form. Built for easy content updates and integration with marketing tools for lead generation.",
+      "client": "Phasor Academy",
+      "technology": "PHP · MySQL · HTML · CSS · JavaScript",
+      "duration": "2 Months",
+      "link": "https://phasor.co.in/",
+      "projectImages": ["/assest/Mockups/Wbsite/Phasor.png",
+        "/assest/Mockups/Wbsite/Phasor 3.png",
+        "/assest/Mockups/Wbsite/Phasor -2.png"
+      ]
     },
   
   ];
@@ -448,9 +557,21 @@ const PortfolioComponent = () => {
 
               {/* Call to action button */}
               <div className="mt-8 text-center">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 transform hover:scale-105">
-                  View Live Project
-                </button>
+                {selectedProject.link?(
+                  <a href={selectedProject.link} target="_blank" >
+
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 transform hover:scale-105">
+                    View Live Project
+                  </button>
+                  </a>
+                ):(
+                  
+                  
+                  <div>
+
+                </div>
+                )
+              }
               </div>
             </div>
           </div>
