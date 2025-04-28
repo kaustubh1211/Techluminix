@@ -50,6 +50,7 @@ const PortfolioComponent = () => {
       "client": "Azim saboowala",
       "technology": "Flutter, Dart, asp.net, c#",
       "duration": "2 months",
+      "link":"https://play.google.com/store/apps/details?id=com.matchdeals.app&hl=en_IN",
       "projectImages": [
         "/assest/Mockups/7.jpg",
         "/assest/Mockups/24.jpg",
@@ -182,19 +183,22 @@ const PortfolioComponent = () => {
         "/assest/Mockups/Wbsite/doc -1.png",
         "/assest/web/2.png"]
     },
-    // {
-    //   "id": 9,
-    //   "image": "/assest/Mockups/35.jpg",
-    //   "categories": ["ERP System", "Website"],
-    //   "gridClass": "col-span-1 row-span-1",
-    //   "title": "Smart School Management System",
-    //   "description": "An end‑to‑end ERP solution designed for schools, covering student admissions, fee collection, inquiry handling, examination scheduling and grading, attendance tracking, and parent‑teacher communications. Includes an intuitive dashboard for administrators and portals for teachers, students, and parents.",
-    //   "client": "Divyaprakash Jha",
-    //   "technology": "React.js · Node.js · TypeScript · PostgreSQL · Docker · Prisma",
-    //   "duration": "6 Months Development + Ongoing Service",
-    //   "link": "https://smart-school-frontend-khaki.vercel.app/",
-    //   "projectImages": ["/assest/Mockups/35.jpg"]
-    // },
+    {
+      "id": 9,
+      "image": "/assest/Mockups/Wbsite/18.png",
+      "categories": ["SEO", "Website"],
+      "gridClass": "col-span-1 row-span-1",
+      "title": "Smart School Management System",
+      "description": "An end‑to‑end ERP solution designed for schools, covering student admissions, fee collection, inquiry handling, examination scheduling and grading, attendance tracking, and parent‑teacher communications. Includes an intuitive dashboard for administrators and portals for teachers, students, and parents.",
+      "client": "Divyaprakash Jha",
+      "technology": "React.js · Node.js · TypeScript · PostgreSQL · Docker · Prisma",
+      "duration": "6 Months Development + Ongoing Service",
+      "link": "https://smart-school-frontend-khaki.vercel.app/",
+      "projectImages": ["/assest/Mockups/Wbsite/20.png",
+        "/assest/Mockups/Wbsite/21.png",
+        "/assest/Mockups/Wbsite/22.png"
+      ]
+    },
     {
       "id": 10,
       "image": "/assest/Mockups/Wbsite/path 1.png",
@@ -211,22 +215,23 @@ const PortfolioComponent = () => {
         "/assest/Mockups/Wbsite/path 1.png"
       ]
     },
-    // {
-    //   "id": 11,
-    //   "image": "/assest/Mockups/Wbsite/ 1.png",
-    //   "categories": ["Website"],
-    //   "gridClass": "col-span-1 row-span-1",
-    //   "title": "Patholist",
-    //   "description": "A community‑driven platform where pathologists can host, share, and discover live and recorded educational sessions. Includes scheduling tools, speaker profiles, and a searchable library of past meetings to foster ongoing professional collaboration.",
-    //   "client": "Dr. Akshay Agarwal",
-    //   "technology": "PHP · MySQL · HTML · CSS · JavaScript",
-    //   "duration": "1 Month",
-    //   "link": "https://patholist.com/",
-    //   "projectImages": [
-    //     "/assest/Mockups/Wbsit.png",
+    {
+      "id": 11,
+      "image": "/assest/Mockups/Wbsite/16.png",
+      "categories": ["Website" ,"SEO"],
+      "gridClass": "col-span-1 row-span-1",
+      "title": "Patholist",
+      "description": "A community‑driven platform where pathologists can host, share, and discover live and recorded educational sessions. Includes scheduling tools, speaker profiles, and a searchable library of past meetings to foster ongoing professional collaboration.",
+      "client": "Dr. Akshay Agarwal",
+      "technology": "PHP · MySQL · HTML · CSS · JavaScript",
+      "duration": "1 Month",
+      "link": "https://patholist.com/",
+      "projectImages": [
+        "/assest/Mockups/Wbsite/17.png",
+        "/assest/Mockups/Wbsite/16.png"
         
-    //   ]
-    // },
+      ]
+    },
 
     // {
     //   "id": 13,

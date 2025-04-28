@@ -1,4 +1,5 @@
 
+import ContactComponent from "@/components/contactComponent";
 import ContactForm from "@/components/ContactForm";
 import DarkNavbar from "@/components/DarkNavbar";
 import DarkContactHero from "@/components/DarkTheem/DarkContactHero";
@@ -10,8 +11,9 @@ export default function page() {
   return (
     <div className="bg-black absolute w-full">
       <DarkNavbar />
+      <ContactComponent/>
       <ContactForm />
-      <DarkContactHero />
+      {/* <DarkContactHero /> */}
       <DarkFooter />
     </div>
   );

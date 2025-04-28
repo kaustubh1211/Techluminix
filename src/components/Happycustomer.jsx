@@ -74,20 +74,18 @@ const TestimonialCard = ({ testimonial }) => (
 
 const TestimonialSlider = () => {
   const [width, setWidth] = useState(0);
-  const [position, setPosition] = useState(0);
-  const containerRef = useRef(null);
+  const containerRef1 = useRef(null);
+  const containerRef2 = useRef(null);
 
   useEffect(() => {
-    if (containerRef.current) {
-      setWidth(containerRef.current.scrollWidth - containerRef.current.offsetWidth);
+    if (containerRef1.current && containerRef2.current) {
+      setWidth(containerRef1.current.scrollWidth - containerRef1.current.offsetWidth);
     }
   }, []);
 
   // Double the testimonials for seamless loop
   const allTestimonials = [...testimonials, ...testimonials];
-
-  //2nd testimonials
-  const allTestimonials2=[...testimonials2 , ...testimonials2];
+  const allTestimonials2 = [...testimonials2, ...testimonials2];
 
   return (
     <div className="w-full bg-black py-40 relative z-40">
@@ -102,44 +100,43 @@ const TestimonialSlider = () => {
         </div>
 
         <div className="relative overflow-hidden">
-          {/* Left Gradient */}
-          {/* <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-black to-transparent z-10" /> */}
-
+          {/* First row - left to right */}
           <motion.div
-            ref={containerRef}
+            ref={containerRef1}
             className="flex"
             animate={{
-              x: [-width/2, 0]
+              x: [0, -width]
             }}
             transition={{
               repeat: Infinity,
-              duration: 20,
+              repeatType: "loop",
+              duration: 25,
               ease: "linear"
             }}
           >
             {allTestimonials.map((testimonial, index) => (
-              <TestimonialCard key={index} testimonial={testimonial} />
+              <TestimonialCard key={`row1-${index}`} testimonial={testimonial} />
             ))}
           </motion.div>
+
+          {/* Second row - right to left */}
           <motion.div
-            ref={containerRef}
-            className="flex mt-10 ml-44"
+            ref={containerRef2}
+            className="flex mt-10"
             animate={{
-              x: [-width/2, 0]
+              x: [-width, 0]
             }}
             transition={{
               repeat: Infinity,
-              duration: 20,
+              repeatType: "loop",
+              duration: 25,
               ease: "linear"
             }}
           >
             {allTestimonials2.map((testimonial, index) => (
-              <TestimonialCard key={index} testimonial={testimonial} />
+              <TestimonialCard key={`row2-${index}`} testimonial={testimonial} />
             ))}
-          </motion.div> 
-
-          {/* Right Gradient */}
-          {/* <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-black to-transparent z-10" /> */}
+          </motion.div>
         </div>
       </div>
     </div>

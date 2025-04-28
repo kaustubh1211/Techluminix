@@ -19,7 +19,7 @@ const DarkNavbar = () => {
               className="h-10 w-8"
             />
             <span className="font-semibold text-lg text-white">
-              TECHLUMINIX
+            TechLuminix
             </span>
           </div>
         </Link>

@@ -39,98 +39,102 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-gray-600 text-sm max-w-xl font-plus_jakarta_Sans">
-              We help startups and enterprises design, develop, and deploy high-quality digital products.
+              We help startups and enterprises design, develop, and deploy
+              high-quality digital products.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
               <Link href="/contact">
-              <button className="px-6 py-3  relative bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-colors">
-                Let's Talk
-              </button>
+                <button className="px-6 py-3  relative bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-colors">
+                  Let's Talk
+                </button>
               </Link>
-              <Link href='/portfolio'>
-              <button className="px-6 py-3 relative bg-white border border-gray-300 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors">
-                Explore Portfolio
-              </button>
+              <Link href="/portfolio">
+                <button className="px-6 py-3 relative bg-white border border-gray-300 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors">
+                  Explore Portfolio
+                </button>
               </Link>
             </div>
           </div>
           {/* Right Content */}
           <div className="mt-8 md:mt-16 lg:mt-28">
-            <div className="flex flex-col md:flex-row justify-center lg:justify-end gap-4 lg:gap-11 max-w-3xl mx-auto lg:mx-0 bg-gradient-radial from-pink-200 via-purple-200 to-transparent opacity-80">
-              {/* 1st div - Enhanced with gradients and shapes */}
-              
-              <img
-                      src="assest/Hero/apple-screen.svg"
-                      alt="icon"
-                      className=" w-80 relative md:mt-52 h-56"
-                      width={800}
-                      height={800}
-                    />
+            <div className="flex flex-col md:flex-row justify-center lg:justify-end gap-4 lg:gap-11 max-w-3xl mx-auto lg:mx-0 relative">
+              {/* Background gradient effect for the entire section */}
+              <div className="absolute inset-0 bg-gradient-to-bl from-pink-300/90  to-transparent rounded-2xl blur-2xl opacity-75 transform scale-105 " />
 
-              {/* cart 2 - unchanged */}
-              <div className="relative md:w-[346px] h-[300px] md:h-[387px] rounded-lg shadow-xl">
- 
+              {/* 1st card - Apple screen */}
+              <div className="relative z-10">
+                <div className="absolute -top-6 -left-6 w-64 h-64 bg-gradient-to-br from-blue-300/40 via-purple-200/30 to-transparent rounded-full blur-md" />
+                <img
+                  src="assest/Hero/apple-screen.svg"
+                  alt="Apple Screen"
+                  className="w-80 relative md:mt-52 h-56 filter drop-shadow-lg"
+                  width={800}
+                  height={800}
+                />
+              </div>
 
-                {/* Browser dots */}
-                {/* <div className="absolute top-3 left-3 flex space-x-1">
-                  <div className="w-2 h-2 rounded-full bg-red-500"></div>
-                  <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
-                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                </div> */}
+              {/* 2nd card - Enhanced with better gradients */}
+              <div className="relative z-10 md:w-[346px] h-[300px] md:h-[387px] rounded-2xl shadow-xl bg-white overflow-hidden">
+                {/* Subtle gradient overlay on the card itself */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-50" />
 
                 {/* Card content */}
                 <div className="absolute inset-0 p-1.5 flex flex-col">
-                  {/* Blue background area */}
+                  {/* Enhanced blue background area with improved gradient */}
                   <div
-                    className="relative mt-4 mb-6 overflow-hidden"
+                    className="relative mt-4 mb-6 overflow-hidden rounded-xl"
                     style={{
-                      backgroundImage:
-                        "linear-gradient(to right bottom, #3770ED80 0%, #3770ED80 10%, #D3E1FF 35% , white 50% )",
+                      background:
+                        "linear-gradient(135deg, rgba(55, 112, 237, 0.85) 0%, rgba(55, 112, 237, 0.7) 15%, rgba(211, 225, 255, 0.9) 50%, rgba(255, 255, 255, 0.95) 75%)",
                     }}
                   >
+                    {/* Grid pattern with improved masking */}
                     <div
                       className="absolute inset-0"
                       style={{
                         backgroundImage: `
-                linear-gradient(to right, rgba(156, 163, 175, 0.2) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(156, 163, 175, 0.2) 1px, transparent 1px)
-              `,
+                    linear-gradient(to right, rgba(156, 163, 175, 0.15) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(156, 163, 175, 0.15) 1px, transparent 1px)
+                  `,
                         backgroundSize: "1.5rem 1.5rem",
-                        mask: "radial-gradient(ellipse at left, black 40%, transparent 70%)",
+                        mask: "radial-gradient(ellipse at left, black 45%, transparent 75%)",
                         WebkitMask:
-                          "radial-gradient(ellipse at left, black 40%, transparent 70%)",
-                        filter: "drop-shadow(0 0 1px rgba(156, 163, 175, 0.1))",
+                          "radial-gradient(ellipse at left, black 45%, transparent 75%)",
                       }}
                     />
 
+                    {/* Additional subtle gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-300/5 to-transparent" />
+
                     <img
                       src="assest/Hero/pointer.svg"
-                      alt="icon"
-                      className="w-30 absolute align-middle mt-16 right-2 h-30"
+                      alt="Pointer"
+                      className="w-30 absolute align-middle mt-16 right-2 h-30 filter drop-shadow-md"
                       width={120}
                       height={150}
                     />
                     <img
                       src="assest/Hero/icon.svg"
-                      alt="icon"
-                      className="w-72 h-48"
+                      alt="Icon"
+                      className="w-72 h-48 relative z-10"
                       width={800}
                       height={800}
                     />
                   </div>
 
-                  {/* Text content */}
-                  <div className="mb-2 pl-5">
-                    <h3 className="text-xl font-semibold text-gray-900">
+                  {/* Text content with subtle background */}
+                  <div className="mb-2 pl-5 relative">
+                    {/* Subtle text background gradient */}
+                    <div className="absolute -left-1 top-0 w-full h-full bg-gradient-to-r from-blue-50/30 to-transparent rounded-lg" />
+
+                    <h3 className="text-xl font-semibold text-gray-900 relative z-10">
                       Effortless integration.
                     </h3>
-                    <p className="text-sm text-gray-500 mt-1">
-                      Seamlessly connect your systems with <br></br> smooth and
-                      reliable API integration.
+                    <p className="text-sm text-gray-500 mt-1 relative z-10">
+                      Seamlessly connect your systems with <br />
+                      smooth and reliable API integration.
                     </p>
-               
-
                   </div>
                 </div>
               </div>
@@ -141,6 +145,5 @@ const HeroSection = () => {
     </div>
   );
 };
-
 
 export default HeroSection;

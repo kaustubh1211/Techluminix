@@ -75,51 +75,67 @@ const ContactUs = () => {
         })
     })
   }
-
   return (
-    <div className="bg-black  text-white mt-12">
-      <Script
-      src="https://www.google.com/recaptcha/api.js?render=6LeIdw4qAAAAAJOwjBqnSsOuwHPq9Lb8lvFTuWaP"
-      strategy="beforeInteractive"
-    />
-      <div className="max-w-7xl mx-auto py-16 px-4 md:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <p className="text-blue-500 mb-2">Contact us</p>
-       
-          <h2 className="text-3xl font-bold mb-3">Talk to us.</h2>
-          <p className="text-gray-400 max-w-md mx-auto">
-            Ready to grow your business online? Schedule a call with us or reach
-            out below.
+    <div className="bg-black text-white min-h-screen p-4">
+
+  <Script
+  src="https://www.google.com/recaptcha/api.js?render=6LeIdw4qAAAAAJOwjBqnSsOuwHPq9Lb8lvFTuWaP"
+  strategy="beforeInteractive"
+/>
+    <div className="max-w-7xl mx-auto pt-8 pb-16">
+      {/* Contact us button */}
+      <div className="mb-12">
+        <button className="border border-blue-500 text-blue-500 px-6 py-2 rounded-full hover:bg-blue-500 hover:text-white transition-colors">
+          Contact us
+        </button>
+      </div>
+
+      <div className="flex flex-col lg:flex-row gap-12">
+        {/* Left side content */}
+        <div className="w-full lg:w-1/2 pr-0 lg:pr-8">
+          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-b from-white to-gray-400 text-transparent bg-clip-text">
+            Contact Us Today
+          </h1>
+          <p className="text-gray-400 text-lg mb-8">
+            For any inquiries or support, reach out to us via email, phone, or our contact form. We're here to help!
           </p>
+
+          {/* Map */}
+          <div className="h-96 w-full rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d488.67140736329566!2d72.8132893529963!3d19.468895027351056!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a9036d68a97d%3A0xd322b144071ee820!2sTechLuminix%20Private%20Limited!5e0!3m2!1sen!2sin!4v1742296722775!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="TechLuminix Office Location"
+            ></iframe>
+          </div>
         </div>
-      
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Form Section */}
-          <div className="w-full lg:w-1/2">
+
+        {/* Right side form */}
+        <div className="w-full lg:w-1/2">
+          <div className="bg-gray-900 rounded-lg p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label
-                  htmlFor="firstName"
-                  className="block text-sm font-medium text-white mb-1"
-                >
-                  First name
+                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  Name
                 </label>
                 <input
                   type="text"
-                  id="firstName"
+                  id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Sunny"
-                  className="w-full p-3 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-4 bg-black text-white rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-white mb-1"
-                >
+                <label htmlFor="email" className="block text-sm font-medium mb-2">
                   Email
                 </label>
                 <input
@@ -129,33 +145,27 @@ const ContactUs = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="kharwarsunny@gmail.com"
-                  className="w-full p-3 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-4 bg-black text-white rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-white mb-1"
-                >
-                  Phone number
+                <label htmlFor="mobile" className="block text-sm font-medium mb-2">
+                  Mobile
                 </label>
                 <input
-                  type="tel"
-                  id="phone"
+                  id="mobile"
+                  type="number"
                   name="mobile"
                   value={formData.mobile}
                   onChange={handleChange}
-                  placeholder="9999220403"
-                  className="w-full p-3 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
+                  placeholder="9856426178"
+                 
+                  className="w-full p-4 bg-black text-white rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                ></input>
               </div>
-
               <div>
-                <label
-                  htmlFor="subject"
-                  className="block text-sm font-medium text-white mb-1"
-                >
+                <label htmlFor="subject" className="block text-sm font-medium mb-2">
                   Subject
                 </label>
                 <input
@@ -163,16 +173,13 @@ const ContactUs = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="Inquiry"
-                  className="w-full p-3 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
+                  placeholder="Inquery"
+          
+                  className="w-full p-4 bg-black text-white rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                ></input>
               </div>
-
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-white mb-1"
-                >
+                <label htmlFor="mobile" className="block text-sm font-medium mb-2">
                   Message
                 </label>
                 <textarea
@@ -180,43 +187,26 @@ const ContactUs = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Enter your message"
-                  rows={6}
-                  className="w-full p-3 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Share your query"
+                  rows={3}
+                  className="w-full p-4 bg-black text-white rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
                 ></textarea>
               </div>
-              {status && <p className="mt-2">{status}</p>}
+
+              {status && <p className="text-blue-400">{status}</p>}
+              
               <button
                 type="submit"
-                className="w-full py-3 px-4 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-md transition-colors duration-300"
+                className="w-full py-4 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-md transition-colors duration-300"
               >
                 Submit
               </button>
             </form>
           </div>
-
-          {/* Map and Contact Info Section */}
-          <div className="w-full lg:w-1/2 flex flex-col gap-6">
-            {/* Map */}
-            <div className="h-64 md:h-96 bg-gray-900 rounded-lg overflow-hidden relative">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d488.67140736329566!2d72.8132893529963!3d19.468895027351056!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a9036d68a97d%3A0xd322b144071ee820!2sTechLuminix%20Private%20Limited!5e0!3m2!1sen!2sin!4v1742296722775!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="TechLuminix Office Location"
-                className="absolute inset-0"
-              ></iframe>
-
-            </div>
-
-          </div>
         </div>
       </div>
     </div>
+  </div>
   );
 };
 
