@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <Head>
         {/* Primary Meta Tags */}
-        <title>TechLuminix</title>
+        <title>TechLuminix - Home</title>
         <meta
           name="description"
           content="TechLuminix crafts stunning websites, develops powerful software, and boosts your online presence with expert digital marketing."
@@ -39,7 +39,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://www.techluminix.com/assest/logo.jpg"
+          content="https://www.techluminix.com/assets/logo.jpg"
         />
         <meta property="og:url" content="https://www.techluminix.com" />
         <meta property="og:type" content="website" />
@@ -56,7 +56,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="https://www.techluminix.com/assest/logo.jpg"
+          content="https://www.techluminix.com/assets/logo.jpg"
         />
 
         {/* Favicon */}
@@ -72,7 +72,7 @@ export default function Home() {
             "@type": "Organization",
             name: "TechLuminix",
             url: "https://www.techluminix.com",
-            logo: "assest/logo.jpg",
+            logo: "assets/logo.jpg",
             description:
               "TechLuminix crafts stunning websites, develops powerful software, and boosts your online presence with expert digital marketing.",
             contactPoint: {

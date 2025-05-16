@@ -7,20 +7,20 @@ const PortfolioShowcase = () => {
   const projects = [
     {
       id: 1,
-      name: "ZBazaar",
-      image: "/assest/portfolio/zbazar.svg",
+      name: "Zbazaar - Shop, Earn & Smile",
+      image: "/assets/portfolio/zbazar.svg",
       description: "Scalable, high-performance mobile solutions.",
     },
     {
       id: 2,
-      name: "Zedpay",
-      image: "/assest/portfolio/zpay.svg",
+      name: "Zed Pay: Recharge, Bill Payment",
+      image: "/assets/portfolio/zpay.svg",
       description: "Scalable, high-performance mobile solutions.",
     },
     {
       id: 3,
-      name: "Clickrs",
-      image: "/assest/portfolio/Clicker.svg",
+      name: "CLICKRS LIKE - SHARE - EARN",
+      image: "/assets/portfolio/Clicker.svg",
       description: "Scalable, high-performance mobile solutions.",
     },
   ];

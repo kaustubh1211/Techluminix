@@ -18,7 +18,7 @@ const Milestone = ({ title, subtitle, description, stats, imageSrc }) => {
         <div className="w-full md:w-1/3 bg-gray-50 p-20 flex items-center justify-center">
           <div className="w-full max-w-xs h-72 relative">
             <img 
-              src="/assest/Brands/z-pay.svg" 
+              src="/assets/Brands/z-pay.svg" 
               alt={`${title} mobile app mockup`}
               className="object-contain h-full w-full"
             />
@@ -55,7 +55,7 @@ const MilestonesComponent = () => {
       title: "Zedpay",
       subtitle: "Fintech Revolution",
       description: "Redefining mobile payments with an intuitive platform that's become essential in daily financial transactions.",
-      imageSrc: "/assest/Brands/z-pay.svg",
+      imageSrc: "/assets/Brands/z-pay.svg",
       stats: [
         { value: "1M+", label: "Downloads" },
         { value: "95%", label: "Satisfaction" },

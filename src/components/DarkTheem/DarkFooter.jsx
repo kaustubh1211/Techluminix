@@ -3,77 +3,51 @@ import React from "react";
 
 const DarkFooter = () => {
   return (
-    <footer className=" pt-12 pb-8 relative   ">
-      <div className="max-w-7xl mx-auto">
+    <footer className="bg-black text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
-        <div className="flex flex-col lg:flex-row justify-center items-center lg:text-left text-center gap-8 mb-12">
+        <div className="flex flex-col lg:flex-row flex-wrap justify-between gap-10 mb-12">
           {/* Left Column - Company Info */}
-          <div className="lg:w-1/3 text-white">
-            <div className="flex space-x-2 lg:justify-start  text-center justify-center items-center">
+          <div className="w-full lg:w-1/4">
+            <div className="flex items-center justify-center lg:justify-start mb-4 space-x-2">
               <img
-                src="/assest/Logo/logo.svg"
+                src="/assets/Logo/logo.svg"
                 alt="TechLuminix Logo"
                 className="h-10 w-8"
               />
-
-              <h3 className="font-semibold text-lg ">TECHLUMINIX</h3>
+              <h3 className="font-semibold text-lg">TECHLUMINIX</h3>
             </div>
-            <p className="text-[#737373] mb-4">
-              At TechLuminix, we craft digital experiences that turn your vision
-              into reality.
+            <p className="text-[#737373] text-center lg:text-left mb-6">
+              At TechLuminix, we are the architects of your digital dreams. With a passion for innovation and a commitment to excellence, we bring a blend of creativity and technical expertise to the forefront.
             </p>
-            <div className="flex gap-4 justify-center items-center lg:justify-start lg:items-start">
-              <Link href="https://x.com/TechLuminix">
-                <img
-                  src="/assest/Social/Vector.png"
-                  className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
-                />
-              </Link>
-
-              <Link href="https://www.instagram.com/techluminix/">
-                <img
-                  src="/assest/Social/instagram.png"
-                  className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
-                />
-              </Link>
-
-              <Link href="https://www.whatsapp.com/channel/0029VaNYEtR6rsQm1MrFEV23">
-                <img
-                  src="/assest/Social/whatsapp.png"
-                  className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
-                />
-              </Link>
-              <Link href="https://www.facebook.com/people/TechLuminix/61562395532365/">
-                <img
-                  src="/assest/Social/facebook.png"
-                  className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
-                />
-              </Link>
-
-              <Link href="https://www.linkedin.com/company/techluminix-pvt-ltd/posts/?feedView=all">
-                <img
-                  src="/assest/Social/linkdin.png"
-                  className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
-                />
-              </Link>
-
-              <Link href="https://www.youtube.com/@TechLuminix">
-                <img
-                  src="/assest/Social/youtube.png"
-                  className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer"
-                />
-              </Link>
+            <div className="flex justify-center lg:justify-start gap-4">
+              {[
+                { href: "https://x.com/TechLuminix", src: "/assets/Social/Vector.png" },
+                { href: "https://www.instagram.com/techluminix/", src: "/assets/Social/instagram.png" },
+                { href: "https://www.whatsapp.com/channel/0029VaNYEtR6rsQm1MrFEV23", src: "/assets/Social/whatsapp.png" },
+                { href: "https://www.facebook.com/people/TechLuminix/61562395532365/", src: "/assets/Social/facebook.png" },
+                { href: "https://www.linkedin.com/company/techluminix-pvt-ltd/posts/?feedView=all", src: "/assets/Social/linkdin.png" },
+                { href: "https://www.youtube.com/@TechLuminix", src: "/assets/Social/youtube.png" },
+              ].map(({ href, src }, i) => (
+                <Link key={i} href={href} target="_blank">
+                  <img
+                    src={src}
+                    className="w-5 h-5 hover:scale-110 transition-transform duration-200"
+                    alt=""
+                  />
+                </Link>
+              ))}
             </div>
           </div>
 
-          {/* Right Section - Navigation Columns */}
-          <div className="lg:w-2/3 grid grid-cols-3  lg:grid-cols-3 gap-8  text-white lg:ml-72">
+          {/* Right Columns - Links */}
+          <div className="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
             {/* Products Column */}
             <div>
               <h3 className="font-semibold text-lg mb-4">Our Products</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="https://luminpay.in/" target="_blank"className="text-gray-400 hover:text-blue-500">
+                  <a href="https://luminpay.in/" target="_blank" className="text-gray-400 hover:text-blue-500">
                     Luminpay
                   </a>
                 </li>
@@ -94,31 +68,11 @@ const DarkFooter = () => {
             <div>
               <h3 className="font-semibold text-lg mb-4">Menu</h3>
               <ul className="space-y-3">
-                <li>
-                  <Link href="/" className="text-gray-400 hover:text-blue-500">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="text-gray-400 hover:text-blue-500">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/portfolio" className="text-gray-400 hover:text-blue-500">
-                    Portfolio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services" className="text-gray-400 hover:text-blue-500">
-                    Service
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-gray-400 hover:text-blue-500">
-                    Contact
-                  </Link>
-                </li>
+                <li><Link href="/" className="text-gray-400 hover:text-blue-500">Home</Link></li>
+                <li><Link href="/about" className="text-gray-400 hover:text-blue-500">About</Link></li>
+                <li><Link href="/portfolio" className="text-gray-400 hover:text-blue-500">Portfolio</Link></li>
+                <li><Link href="/services" className="text-gray-400 hover:text-blue-500">Service</Link></li>
+                <li><Link href="/contact" className="text-gray-400 hover:text-blue-500">Contact</Link></li>
               </ul>
             </div>
 
@@ -126,41 +80,21 @@ const DarkFooter = () => {
             <div>
               <h3 className="font-semibold text-lg mb-4">Support</h3>
               <ul className="space-y-3">
-                <li>
-                  <a    href="tel:9226057563" className="text-gray-400 hover:text-blue-500">
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:info@techluminix.com" className="text-gray-400 hover:text-blue-500">
-                    Email
-                  </a>
-                </li>
+                <li><a href="tel:9226057563" className="text-gray-400 hover:text-blue-500">Contact</a></li>
+                <li><a href="mailto:info@techluminix.com" className="text-gray-400 hover:text-blue-500">Email</a></li>
               </ul>
             </div>
           </div>
         </div>
-
-        {/* Bottom Bar */}
       </div>
-      <div className="pt-8  bg-black    ">
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
-          <p className="text-gray-300 text-sm lg:ml-10">
-            Copyright © 2025 Techluminix. All Rights Reserved
-          </p>
-          <div className="flex gap-6 lg:mr-10">
-            <Link
-              href="term-conditions"
-              className="text-gray-300 hover:text-blue-500 text-sm"
-            >
-              Terms & Conditions
-            </Link>
-            <Link
-              href="privacy-policy"
-              className="text-gray-300 hover:text-blue-500 text-sm"
-            >
-              Privacy Policy
-            </Link>
+
+      {/* Bottom Bar */}
+      <div className="px-4 sm:px-6 lg:px-8 py-6 border-t border-gray-800 bg-black text-sm text-gray-300">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-center">© 2025 TechLuminix. All Rights Reserved</p>
+          <div className="flex gap-4">
+            <Link href="/term-conditions" className="hover:text-blue-500">Terms & Conditions</Link>
+            <Link href="/privacy-policy" className="hover:text-blue-500">Privacy Policy</Link>
           </div>
         </div>
       </div>

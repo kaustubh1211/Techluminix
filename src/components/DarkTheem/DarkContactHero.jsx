@@ -33,7 +33,7 @@ const DarkContactHero = () => {
           {/* Image Container */}
           <div className="relative w-full h-full flex items-center justify-center">
             <img
-              src="/assest/Logo/10.png"
+              src="/assets/Logo/10.png"
               alt="VR User"
               className=" w-56 h-52 object-contain"
             />

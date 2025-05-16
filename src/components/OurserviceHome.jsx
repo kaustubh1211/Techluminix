@@ -28,7 +28,7 @@ export default function OurserviceHome() {
             />
             <div className="  text-black  relative z-10">
               <img
-                src="/assest/Statesection/Function2.png"
+                src="/assets/Statesection/Function2.png"
                 className="w-auto h-28   transition-all duration-300"
               />
             </div>
@@ -57,7 +57,7 @@ export default function OurserviceHome() {
             />
             <div className="text-gray-400 relative mt-4 z-10 text-xs font-mono">
               <img
-                src="/assest/Statesection/design.png"
+                src="/assets/Statesection/design.png"
                 className=" w-auto max-h-36   transition-all duration-300"
               />
             </div>
@@ -89,7 +89,7 @@ export default function OurserviceHome() {
               {/* Image with saturation effect */}
               <div className="mt-4">
                 <img
-                  src="/assest/Statesection/dev.png"
+                  src="/assets/Statesection/dev.png"
                   className="w-auto h-36  transition-all duration-300"
                 />
               </div>

@@ -2,25 +2,25 @@ import React from "react";
 const WhyChooseUs = () => {
   const features = [
     {
-      icon: "assest/About-us/WhyChoos/reputation.svg",
+      icon: "assets/About-us/WhyChoos/reputation.svg",
       title: "Expertise",
       description:
         "A team of seasoned experts, turning innovation into excellence.",
     },
     {
-      icon: "assest/About-us/WhyChoos/Bulb.svg",
+      icon: "assets/About-us/WhyChoos/Bulb.svg",
       title: "Innovation",
       description:
         "Leading the way with cutting-edge technology and forward-thinking solutions.",
     },
     {
-      icon: "assest/About-us/WhyChoos/collaboration.svg",
+      icon: "assets/About-us/WhyChoos/collaboration.svg",
       title: "Collaboration",
       description: "We partner with you to turn vision into reality.",
     },
     {
-      icon: "assest/About-us/WhyChoos/Star.svg",
-      title: "Expertise",
+      icon: "assets/About-us/WhyChoos/Star.svg",
+      title: "Quality",
       description:
         "We deliver excellence with every project, ensuring top-tier results.",
     },

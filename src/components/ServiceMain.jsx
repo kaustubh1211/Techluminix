@@ -62,7 +62,7 @@ const ServiceMain = () => {
           >
             <div className="relative">
               <Image
-                src="/assest/Service/head.svg"
+                src="/assets/Service/head.svg"
                 alt="App interface mockup"
                 className={`w-full h-auto transition-transform duration-700 ${
                   isLoaded ? "scale-100" : "scale-95"

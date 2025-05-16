@@ -6,25 +6,25 @@ const testimonials = [
   {
     name: "Chirag Pendulkar",
     role: "",
-    image: "/assest/testimonals/chirag.svg",
+    image: "/assets/testimonals/chirag.svg",
     content: "Every project was completed on time and within the agreed budget. They were transparent throughout the process, keeping us informed at every step."
   },
   {
     name: "Sonya Mkrtchyan",
     role: "Freelancer",
-    image: "/assest/testimonals/sonya.svg",
+    image: "/assets/testimonals/sonya.svg",
     content: "Excellent communication and skills. recommend!"
   },
   {
     name: "Dennis Gerten",
     role: "Project Manager @Insurensa",
-    image: "/assest/testimonals/dennies.svg",
+    image: "/assets/testimonals/dennies.svg",
     content: "If you want your stuff do be done really good, super fast, extremely effective, absolutely reliable and with kreative input: then THIS IS YOUR MAN !!!!!!!!!!!!!!!!!!!!"
   },
   {
     name: "Ramesh Subburaj",
     role: "CEO @Cross Hurdles Systems",
-    image: "/assest/testimonals/siva.svg",
+    image: "/assets/testimonals/siva.svg",
     content: "Delivers such a great service that it can benefit all kinds of people from any number of industries."
   }
 ];
@@ -32,25 +32,25 @@ const testimonials2 = [
   {
     name: "Ramesh Subburaj",
     role: "CEO @Cross Hurdles Systems",
-    image: "/assest/testimonals/siva.svg",
+    image: "/assets/testimonals/siva.svg",
     content: "Delivers such a great service that it can benefit all kinds of people from any number of industries."
   },
   {
     name: "Chirag Pendulkar",
     role: "",
-    image: "/assest/testimonals/chirag.svg",
+    image: "/assets/testimonals/chirag.svg",
     content: "Every project was completed on time and within the agreed budget. They were transparent throughout the process, keeping us informed at every step."
   },
   {
     name: "Dennis Gerten",
     role: "Project Manager @Insurensa",
-    image: "/assest/testimonals/dennies.svg",
+    image: "/assets/testimonals/dennies.svg",
     content: "If you want your stuff do be done really good, super fast, extremely effective, absolutely reliable and with kreative input: then THIS IS YOUR MAN !!!!!!!!!!!!!!!!!!!!"
   },
   {
     name: "Sonya Mkrtchyan",
     role: "Freelancer",
-    image: "/assest/testimonals/sonya.svg",
+    image: "/assets/testimonals/sonya.svg",
     content: "Excellent communication and skills. recommend!"
   },
 ];

@@ -23,7 +23,7 @@ const PortfolioComponent = () => {
   const portfolioItems = [
     {
       "id": 12,
-      "image": "/assest/Mockups/app/Zp - 6.jpg",
+      "image": "/assets/Mockups/app/Zp - 6.jpg",
       "categories": ["Mobile apps" ,"Social media Branding"],
       "gridClass": "col-span-1 row-span-1",
       "title": "Zed Pay: Recharge, Bill Payment",
@@ -32,17 +32,17 @@ const PortfolioComponent = () => {
       "technology": "Flutter · Firebase · Laravel · PHP · MySQL",
       "duration": "2 Months Development + Ongoing Service",
       "link": "https://play.google.com/store/apps/details?id=com.zfintech.zedpay&hl=en_IN",
-      "projectImages": ["/assest/Mockups/app/Zp - 6.jpg",
-        "/assest/Mockups/app/Zp - 5.jpg",
-        "/assest/Mockups/app/Zp - 7.jpg",
-        "/assest/Mockups/app/Zp - 8.jpg",
-        "/assest/Mockups/app/Zp - 9.jpg",
-        "/assest/Mockups/app/Zp - 10.jpg"
+      "projectImages": ["/assets/Mockups/app/Zp - 6.jpg",
+        "/assets/Mockups/app/Zp - 5.jpg",
+        "/assets/Mockups/app/Zp - 7.jpg",
+        "/assets/Mockups/app/Zp - 8.jpg",
+        "/assets/Mockups/app/Zp - 9.jpg",
+        "/assets/Mockups/app/Zp - 10.jpg"
       ]
     },
     {
       "id": 1,
-      "image": "/assest/Mockups/1.jpg",
+      "image": "/assets/Mockups/1.jpg",
       "categories": ["Mobile apps"],
       "gridClass": "col-span-1 row-span-1",
       "title": "Match deals",
@@ -52,14 +52,14 @@ const PortfolioComponent = () => {
       "duration": "2 months",
       "link":"https://play.google.com/store/apps/details?id=com.matchdeals.app&hl=en_IN",
       "projectImages": [
-        "/assest/Mockups/7.jpg",
-        "/assest/Mockups/24.jpg",
-        "/assest/Mockups/1.jpg"
+        "/assets/Mockups/7.jpg",
+        "/assets/Mockups/24.jpg",
+        "/assets/Mockups/1.jpg"
       ]
     },
     {
       "id": 2,
-      "image": "/assest/Mockups/29.jpg",
+      "image": "/assets/Mockups/29.jpg",
       "categories": ["Mobile apps"],
       "gridClass": "col-span-1 row-span-1 ",
       "title": "Team unity",
@@ -68,14 +68,14 @@ const PortfolioComponent = () => {
       "technology": "Flutter, Dart, asp.net, c#",
       "duration": "2 months",
       "projectImages": [
-        "/assest/Mockups/21.jpg",
-        "/assest/Mockups/11.jpg",
-        "/assest/Mockups/29.jpg"
+        "/assets/Mockups/21.jpg",
+        "/assets/Mockups/11.jpg",
+        "/assets/Mockups/29.jpg"
       ]
     },
     {
       "id": 3,
-      "image": "/assest/Mockups/18.jpg",
+      "image": "/assets/Mockups/18.jpg",
       "categories": ["Mobile apps "],
       "gridClass": "col-span-1 row-span-1",
       "title": "Zbazaar – Shop, Earn & Smile",
@@ -85,14 +85,14 @@ const PortfolioComponent = () => {
       "duration": "6 Months Development + Ongoing Service",
       "link": "https://play.google.com/store/apps/details?id=com.zbazaarsolutions.zbazaar&hl=en_IN",
       "projectImages": [
-        "/assest/Mockups/10.jpg",
-        "/assest/Mockups/13.jpg",
-        "/assest/Mockups/18.jpg"
+        "/assets/Mockups/10.jpg",
+        "/assets/Mockups/13.jpg",
+        "/assets/Mockups/18.jpg"
       ]
     },
     // {
     //   "id": 4,
-    //   "image": "/assest/web/1.png",
+    //   "image": "/assets/web/1.png",
     //   "categories": ["Websites", "SEO"],
     //   "gridClass": "col-span-1 row-span-1",
     //   "title": "Product Packaging Design",
@@ -100,11 +100,11 @@ const PortfolioComponent = () => {
     //   "client": "EcoTech Gadgets",
     //   "technology": "Adobe Illustrator, Photoshop, Blender",
     //   "duration": "1 month",
-    //   "projectImages": ["/assest/web/1.png"]
+    //   "projectImages": ["/assets/web/1.png"]
     // },
     {
       "id": 5,
-      "image": "/assest/Mockups/19.jpg",
+      "image": "/assets/Mockups/19.jpg",
       "categories": ["Mobile apps"],
       "gridClass": "col-span-1 row-span-1",
       "title": "CLICKRS- LIKE · SHARE · EARN",
@@ -114,13 +114,13 @@ const PortfolioComponent = () => {
       "duration": "9 Months (Ongoing)",
       "link": "https://play.google.com/store/apps/details?id=com.clickrs.app&hl=en_IN",
       "projectImages": [
-        "/assest/Mockups/26.jpg",
-        "/assest/Mockups/19.jpg"
+        "/assets/Mockups/26.jpg",
+        "/assets/Mockups/19.jpg"
       ]
     },
     {
       "id": 6,
-      "image": "/assest/Mockups/28.jpg",
+      "image": "/assets/Mockups/28.jpg",
       "categories": ["Mobile apps"],
       "gridClass": "col-span-1 row-span-1",
       "title": "Jeevandhara Digital – Shop, Pay",
@@ -130,14 +130,14 @@ const PortfolioComponent = () => {
       "duration": "3 Months Development + Ongoing Service",
       "link": "https://play.google.com/store/apps/details?id=com.jeevandhara.app&hl=en_IN",
       "projectImages": [
-        "/assest/Mockups/20.jpg",
-        "/assest/Mockups/4.jpg",
-        "/assest/Mockups/28.jpg"
+        "/assets/Mockups/20.jpg",
+        "/assets/Mockups/4.jpg",
+        "/assets/Mockups/28.jpg"
       ]
     },
     // {
     //   "id": 7,
-    //   "image": "/assest/Mockups/31.jpg",
+    //   "image": "/assets/Mockups/31.jpg",
     //   "categories": ["Mobile apps"],
     //   "gridClass": "col-span-1 row-span-1",
     //   "title": "School app",
@@ -146,14 +146,14 @@ const PortfolioComponent = () => {
     //   "technology": "Flutter, Dart, node , sql",
     //   "duration": "1 month",
     //   "projectImages": [
-    //     "/assest/Mockups/32.jpg",
-    //     "/assest/Mockups/33.jpg",
-    //     "/assest/Mockups/34.jpg"
+    //     "/assets/Mockups/32.jpg",
+    //     "/assets/Mockups/33.jpg",
+    //     "/assets/Mockups/34.jpg"
     //   ]
     // },
     {
       "id": 15,
-      "image": "/assest/Mockups/SVN/SVN -1.jpg",
+      "image": "/assets/Mockups/SVN/SVN -1.jpg",
       "categories": ["Mobile apps","Social media Branding"],
       "gridClass": "col-span-1 row-span-1",
       "title": "SVN PAY: Easy Bill Payments",
@@ -162,14 +162,14 @@ const PortfolioComponent = () => {
       "technology": "Flutter · Firebase · Node.js · Express.js · TypeScript · Prisma · MySQL",
       "duration": "4 Months Development + Ongoing Service",
       "link": "https://play.google.com/store/apps/details?id=com.svnapl.pay&hl=en_IN",
-      "projectImages": ["/assest/Mockups/SVN/SVN - 3.jpg",
-        "/assest/Mockups/SVN/SVN -2.jpg",
-        "/assest/Mockups/SVN/SVN -4.jpg"
+      "projectImages": ["/assets/Mockups/SVN/SVN - 3.jpg",
+        "/assets/Mockups/SVN/SVN -2.jpg",
+        "/assets/Mockups/SVN/SVN -4.jpg"
       ]
     },
     {
       "id": 8,
-      "image": "/assest/web/2.png",
+      "image": "/assets/Mockups/Wbsite/prasadsurgicalhospital.png",
       "categories": ["Websites", "SEO"],
       "gridClass": "col-span-1 row-span-1",
       "title": "Prasad Surgical Hospital",
@@ -179,29 +179,31 @@ const PortfolioComponent = () => {
       "duration": "1 month",
       "link": "https://www.prasadsurgicalhospital.com/",
       "projectImages": [
-        "/assest/Mockups/Wbsite/doc 2.png",
-        "/assest/Mockups/Wbsite/doc -1.png",
-        "/assest/web/2.png"]
+        "/assets/Mockups/Wbsite/prasadsurgicalhospital.png",
+        "/assets/Mockups/Wbsite/prasadsurgicalhospital1.png",
+        "/assets/Mockups/Wbsite/prasadsurgicalhospital2.png",
+        "/assets/Mockups/Wbsite/prasadsurgicalhospital3.png"]
     },
     {
       "id": 9,
-      "image": "/assest/Mockups/Wbsite/18.png",
+      "image": "/assets/Mockups/Wbsite/dexEducation1.png",
       "categories": ["SEO", "Website"],
       "gridClass": "col-span-1 row-span-1",
       "title": "Smart School Management System",
       "description": "An end‑to‑end ERP solution designed for schools, covering student admissions, fee collection, inquiry handling, examination scheduling and grading, attendance tracking, and parent‑teacher communications. Includes an intuitive dashboard for administrators and portals for teachers, students, and parents.",
-      "client": "Divyaprakash Jha",
+      "client": "Manish Kansara",
       "technology": "React.js · Node.js · TypeScript · PostgreSQL · Docker · Prisma",
       "duration": "6 Months Development + Ongoing Service",
       "link": "https://smart-school-frontend-khaki.vercel.app/",
-      "projectImages": ["/assest/Mockups/Wbsite/20.png",
-        "/assest/Mockups/Wbsite/21.png",
-        "/assest/Mockups/Wbsite/22.png"
+      "projectImages": ["/assets/Mockups/Wbsite/dexEducation2.png",
+        "/assets/Mockups/Wbsite/dexEducation3.png",
+        "/assets/Mockups/Wbsite/dexEducation4.png",
+        "/assets/Mockups/Wbsite/dexEducation5.png"
       ]
     },
     {
       "id": 10,
-      "image": "/assest/Mockups/Wbsite/path 1.png",
+      "image": "/assets/Mockups/Wbsite/acepathology1.png",
       "categories": ["Websites","SEO"],
       "gridClass": "col-span-1 row-span-1",
       "title": "AcePathology",
@@ -210,14 +212,14 @@ const PortfolioComponent = () => {
       "technology": "PHP · MySQL · HTML · CSS · JavaScript",
       "duration": "1 Month",
       "link": "https://acepathology.co.in/",
-      "projectImages": ["/assest/Mockups/Wbsite/path 2.png",
-        "/assest/Mockups/Wbsite/patho 3.png",
-        "/assest/Mockups/Wbsite/path 1.png"
+      "projectImages": ["/assets/Mockups/Wbsite/acepathology1.png",
+        "/assets/Mockups/Wbsite/acepathology2.png",
+        "/assets/Mockups/Wbsite/acepathology3.png"
       ]
     },
     {
       "id": 11,
-      "image": "/assest/Mockups/Wbsite/16.png",
+      "image": "/assets/Mockups/Wbsite/patholist1.png",
       "categories": ["Website" ,"SEO"],
       "gridClass": "col-span-1 row-span-1",
       "title": "Patholist",
@@ -227,15 +229,15 @@ const PortfolioComponent = () => {
       "duration": "1 Month",
       "link": "https://patholist.com/",
       "projectImages": [
-        "/assest/Mockups/Wbsite/17.png",
-        "/assest/Mockups/Wbsite/16.png"
+        "/assets/Mockups/Wbsite/patholist2.png",
+        "/assets/Mockups/Wbsite/patholist1.png"
         
       ]
     },
 
     // {
     //   "id": 13,
-    //   "image": "/assest/Mockups/39.jpg",
+    //   "image": "/assets/Mockups/39.jpg",
     //   "categories": ["ERP System", "Website"],
     //   "gridClass": "col-span-1 row-span-1",
     //   "title": "Society Management System",
@@ -244,11 +246,11 @@ const PortfolioComponent = () => {
     //   "technology": "Figma · Next.js · MySQL",
     //   "duration": "3 Months (Ongoing)",
     //   "link": null,
-    //   "projectImages": ["/assest/Mockups/39.jpg"]
+    //   "projectImages": ["/assets/Mockups/39.jpg"]
     // },
     {
       "id": 14,
-      "image": "/assest/Mockups/Wbsite/Phasor.png",
+      "image": "/assets/Mockups/Wbsite/Phasor.png",
       "categories": ["Websites","SEO"],
       "gridClass": "col-span-1 row-span-1",
       "title": "Phasor Academy",
@@ -257,9 +259,9 @@ const PortfolioComponent = () => {
       "technology": "PHP · MySQL · HTML · CSS · JavaScript",
       "duration": "2 Months",
       "link": "https://phasor.co.in/",
-      "projectImages": ["/assest/Mockups/Wbsite/Phasor.png",
-        "/assest/Mockups/Wbsite/Phasor 3.png",
-        "/assest/Mockups/Wbsite/Phasor -2.png"
+      "projectImages": ["/assets/Mockups/Wbsite/Phasor.png",
+        "/assets/Mockups/Wbsite/phasor1.png",
+        "/assets/Mockups/Wbsite/phasor2.png"
       ]
     },
   

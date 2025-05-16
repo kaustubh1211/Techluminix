@@ -38,7 +38,7 @@ const ContactComponent = () => {
               <Building2 size={32} className="text-white" />
             </div>
             <h2 className="text-xl font-bold mb-2">Techluminix</h2>
-            <p className="text-gray-400">Shop No.3, G.M Tower, Naringai Rd, Virar East, Virar, Mumbai</p>
+            <p className="text-gray-400">Shop No.3, G.M Tower, Naringai Rd, Virar East, Mumbai, India - 401305</p>
           </div>
         </div>
       </div>

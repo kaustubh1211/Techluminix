@@ -1,11 +1,9 @@
 "use client"
-import React, { useState , useEffect} from 'react';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import React, { useState } from 'react';
 import Script from 'next/script';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
-  
     name: '',
     email: '',
     mobile: '',
@@ -27,10 +25,10 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    if (!window.grecaptcha) {
+    if (typeof window === 'undefined' || !window.grecaptcha) {
       setStatus('❌ reCAPTCHA not loaded')
       return
-    }
+    }    
 
     // 1) Get a fresh reCAPTCHA v3 token
     window.grecaptcha.ready(() => {
@@ -42,7 +40,7 @@ const ContactUs = () => {
             'g-recaptcha-response': token,
             name: formData.name,
             email: formData.email,
-            mobile: formData.phone,
+            mobile: formData.mobile,
             subject: formData.subject,
             message: formData.message
           }).toString()
@@ -58,16 +56,22 @@ const ContactUs = () => {
               method: 'POST',
               headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
               body
-            })
+            });
+
+            if (!res.ok) {
+              console.error('HTTP error:', res.status);
+              setStatus(`❌ Server returned status ${res.status}`);
+              return;
+            }
 
             const json = await res.json() // your PHP returns JSON
-            if (json.success) {
-              setStatus('✅ Message Sent Successfully!')
-              setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+            if (json.status === 'success') {
+              setStatus('✅ ' + (json.message || 'Message Sent Successfully!'));
+              setFormData({ name: '', email: '', mobile: '', subject: '', message: '' });
             } else {
-              console.error('Server error:', json)
-              setStatus('❌ Error Sending Message.')
-            }
+              console.error('Server error:', json);
+              setStatus('❌ ' + (json.message || 'Error Sending Message.'));
+            }            
           } catch (err) {
             console.error(err)
             setStatus('❌ Network Error.')
@@ -77,11 +81,11 @@ const ContactUs = () => {
   }
   return (
     <div className="bg-black text-white min-h-screen p-4">
+    
+    <Script
+      src="https://www.google.com/recaptcha/api.js?render=6LeIdw4qAAAAAJOwjBqnSsOuwHPq9Lb8lvFTuWaP"
+      strategy="lazyOnload" />
 
-  <Script
-  src="https://www.google.com/recaptcha/api.js?render=6LeIdw4qAAAAAJOwjBqnSsOuwHPq9Lb8lvFTuWaP"
-  strategy="beforeInteractive"
-/>
     <div className="max-w-7xl mx-auto pt-8 pb-16">
       {/* Contact us button */}
       <div className="mb-12">
@@ -101,7 +105,7 @@ const ContactUs = () => {
           </p>
 
           {/* Map */}
-          <div className="h-96 w-full rounded-lg overflow-hidden">
+          <div className="h-[35rem] w-full rounded-lg overflow-hidden">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d488.67140736329566!2d72.8132893529963!3d19.468895027351056!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a9036d68a97d%3A0xd322b144071ee820!2sTechLuminix%20Private%20Limited!5e0!3m2!1sen!2sin!4v1742296722775!5m2!1sen!2sin"
               width="100%"
@@ -129,7 +133,7 @@ const ContactUs = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Sunny"
+                  placeholder="Your Name"
                   className="w-full p-4 bg-black text-white rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>
@@ -144,7 +148,7 @@ const ContactUs = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="kharwarsunny@gmail.com"
+                  placeholder="yourmail@techluminix.com"
                   className="w-full p-4 bg-black text-white rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>
@@ -159,8 +163,7 @@ const ContactUs = () => {
                   name="mobile"
                   value={formData.mobile}
                   onChange={handleChange}
-                  placeholder="9856426178"
-                 
+                  placeholder="9876543210"
                   className="w-full p-4 bg-black text-white rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
                 ></input>
               </div>
@@ -173,8 +176,7 @@ const ContactUs = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="Inquery"
-          
+                  placeholder="Your Subject"
                   className="w-full p-4 bg-black text-white rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
                 ></input>
               </div>

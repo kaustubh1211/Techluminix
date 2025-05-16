@@ -83,7 +83,7 @@ export default function AboutHead() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl transform rotate-3 opacity-20 blur-sm"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-800 transform transition-all duration-500 hover:-translate-y-2">
                 <img
-                  src="/assest/About-us/About1.png"
+                  src="/assets/About-us/About1.png"
                   alt="Digital innovation team"
                   className="w-full h-auto"
                   height={800}
@@ -124,7 +124,7 @@ export default function AboutHead() {
                 </p>
 
                 <p className="text-gray-400 text-lg leading-relaxed">
-                  We get it and that is why AgencyBox was born! We help you launch
+                  We get it and that is why TechLuminix was born! We help you launch
                   your ideas and achieve your goals much faster.
                 </p>
               </div>
@@ -133,7 +133,7 @@ export default function AboutHead() {
                 {[
                   { number: "5+", text: "Years of Experience" },
                   { number: "20+", text: "Recognition Received" },
-                  { number: "40+", text: "Completed Projects" },
+                  { number: "100%", text: "Completed Projects" },
                   { number: "100%", text: "Happy Clients" }
                 ].map((stat, index) => (
                   <div 
@@ -153,7 +153,7 @@ export default function AboutHead() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl transform -rotate-2 opacity-20 blur-sm"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-800 transform hover:scale-[1.02] transition-all duration-500">
                 <img
-                  src="/assest/About-us/About2.png"
+                  src="/assets/About-us/About2.png"
                   alt="Team members collaborating"
                   className="w-full h-auto"
                   width={800}

@@ -47,7 +47,7 @@ const OurServicesSection = () => {
               />
               <div className="text-gray-400 relative z-10">
                 <img
-                  src="/assest/Hover/Figma.png"
+                  src="/assets/Hover/Figma.png"
                   className="w-auto h-20 saturate-[5%] group-hover:saturate-100 transition-all duration-300"
 
                 />
@@ -79,7 +79,7 @@ const OurServicesSection = () => {
               <div className="text-gray-400 relative z-10 text-xs font-mono">
               
                 <img
-                  src="/assest/Hover/Function.png"
+                  src="/assets/Hover/Function.png"
                   className=" w-auto max-h-24 saturate-[5%] group-hover:saturate-100 transition-all duration-300"
                 />
               
@@ -115,7 +115,7 @@ const OurServicesSection = () => {
                 {/* Image with saturation effect */}
                 <div className="mt-4">
                   <img
-                    src="/assest/Hover/BooKAll.png"
+                    src="/assets/Hover/BooKAll.png"
                     className="w-auto h-28 saturate-0 group-hover:saturate-100 transition-all duration-300"
                   />
                 </div>

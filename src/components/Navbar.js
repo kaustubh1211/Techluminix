@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link href="/">
           <div className="flex items-center space-x-2">
             <img
-              src="/assest/Logo/logo.svg"
+              src="/assets/Logo/logo.svg"
               alt="TechLuminix Logo"
               className="h-10 w-8"
             />

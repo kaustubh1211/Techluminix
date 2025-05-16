@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 function ParallaxBrands() {
     const brands = [
-        "/assest/Brands/brand1.png",
-        "/assest/Brands/logo-3.png",
-        "/assest/Brands/logo-4.png",
-        "/assest/Brands/logo-5.png",
-        "/assest/Brands/logo-3.png",
-        "/assest/Brands/logo-6.png",
+        "/assets/Brands/brand1.png",
+        "/assets/Brands/logo-3.png",
+        "/assets/Brands/logo-4.png",
+        "/assets/Brands/logo-5.png",
+        "/assets/Brands/logo-3.png",
+        "/assets/Brands/logo-6.png",
     ];
 
     // Create three copies to ensure smooth transition

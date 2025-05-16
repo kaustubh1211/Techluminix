@@ -34,8 +34,7 @@ const HeroSection = () => {
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl  font-semibold leading-tight font-inter">
               Building Scalable{" "}
-              <span className="block">Products That Make an</span>{" "}
-              <span className="block">Impact</span>
+              <span className="block">Products That Make an Impact</span>
             </h1>
 
             <p className="text-gray-600 text-sm max-w-xl font-plus_jakarta_Sans">
@@ -66,7 +65,7 @@ const HeroSection = () => {
               <div className="relative z-10">
                 <div className="absolute -top-6 -left-6 w-64 h-64 bg-gradient-to-br from-blue-300/40 via-purple-200/30 to-transparent rounded-full blur-md" />
                 <img
-                  src="assest/Hero/apple-screen.svg"
+                  src="assets/Hero/apple-screen.svg"
                   alt="Apple Screen"
                   className="w-80 relative md:mt-52 h-56 filter drop-shadow-lg"
                   width={800}
@@ -108,14 +107,14 @@ const HeroSection = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-300/5 to-transparent" />
 
                     <img
-                      src="assest/Hero/pointer.svg"
+                      src="assets/Hero/pointer.svg"
                       alt="Pointer"
                       className="w-30 absolute align-middle mt-16 right-2 h-30 filter drop-shadow-md"
                       width={120}
                       height={150}
                     />
                     <img
-                      src="assest/Hero/icon.svg"
+                      src="assets/Hero/icon.svg"
                       alt="Icon"
                       className="w-72 h-48 relative z-10"
                       width={800}
