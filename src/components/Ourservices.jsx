@@ -48,6 +48,7 @@ const OurServicesSection = () => {
               <div className="text-gray-400 relative z-10">
                 <img
                   src="/assets/Hover/Figma.png"
+                  alt="figma"
                   className="w-auto h-20 saturate-[5%] group-hover:saturate-100 transition-all duration-300"
 
                 />
@@ -80,6 +81,7 @@ const OurServicesSection = () => {
               
                 <img
                   src="/assets/Hover/Function.png"
+                  alt="devloper"
                   className=" w-auto max-h-24 saturate-[5%] group-hover:saturate-100 transition-all duration-300"
                 />
               
@@ -116,6 +118,7 @@ const OurServicesSection = () => {
                 <div className="mt-4">
                   <img
                     src="/assets/Hover/BooKAll.png"
+                    alt="social-media"
                     className="w-auto h-28 saturate-0 group-hover:saturate-100 transition-all duration-300"
                   />
                 </div>

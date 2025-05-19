@@ -13,7 +13,7 @@ const WhatWeDoSection = () => {
       </div>
 
       {/* Cards Grid */}
-      <div className="grid md:grid-cols-3 gap-8 ">
+      <div className="grid md:grid-cols-3 gap-8 text-center ">
         {/* App Development Card */}
         <div className="bg-green-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
           <div className="bg-white rounded-lg p-4 mb-6 overflow-hidden">
@@ -28,7 +28,7 @@ const WhatWeDoSection = () => {
             </div>
             {/* Placeholder for code image */}
             <div className="w-full h-48 flex items-center justify-center bg-gray-100 rounded">
-            <img src='assets/WhatWeDo/code.svg' className=' w-fit h-fit'/>          
+            <img src='assets/WhatWeDo/code.svg' alt='app-dev' className=' w-fit h-fit'/>          
             </div>
           </div>
           <h3 className="text-xl font-bold mb-2">App Development</h3>
@@ -51,7 +51,7 @@ const WhatWeDoSection = () => {
             </div>
             {/* Placeholder for Figma UI image */}
             <div className="w-full h-48 flex items-center justify-center bg-gray-100 rounded">
-              <img src='assets/WhatWeDo/figma.svg' className=' w-fit h-fit'/>          
+              <img src='assets/WhatWeDo/figma.svg' alt='figma' className=' w-fit h-fit mt-6'/>          
             </div>
           </div>
           <h3 className="text-xl font-bold mb-2">UX/UI Design</h3>
@@ -74,7 +74,7 @@ const WhatWeDoSection = () => {
             </div>
             {/* Placeholder for website image */}
             <div className="w-full h-48 flex items-center justify-center bg-gray-100 rounded">
-            <img src='assets/WhatWeDo/web.svg' className=' w-fit h-fit'/>          
+            <img src='assets/WhatWeDo/web.svg' alt='web-dev' className=' w-fit h-fit'/>          
             </div>
           </div>
           <h3 className="text-xl font-bold mb-2">Web Development</h3>
