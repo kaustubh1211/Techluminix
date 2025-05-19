@@ -1,112 +1,90 @@
-import React from 'react'
+import React from 'react';
 
-export default function OurserviceHome() {
+const WhatWeDoSection = () => {
   return (
-    <section className=" mx-auto px-4 lg:px-24      justify-self-center">
-    <div className="container  mx-auto px-4">
-    
-      {/* Header Section */}
-      <div className="text-center mb-16 max-w-3xl mx-auto  mt-40">
-        <h1 className="text-4xl font-bold mb-4">What We Do</h1>
-        <p className="text-gray-400 text-lg">
-          Turning ideas into reality with seamless design, powerful <br />
+    <div className="w-full mx-auto px-4 lg:px-24    justify-self-center mt-24">
+      {/* Heading Section */}
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-bold mb-4">What We Do</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Turning ideas into reality with seamless design, powerful
           development, and scalable solutions.
         </p>
       </div>
-      {/* Services Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative ">
-        {/* Designer Card */}
-        <div className="bg-[#F7F7F7]  rounded-lg overflow-hidden ">
-          <div className="h-40 bg-[#EFEFEF] relative m-2 flex items-center justify-center group">
-            {/* Background pattern */}
-            <div
-              className="absolute inset-0 opacity-15"
-              style={{
-                backgroundImage: `radial-gradient(circle at 2px 2px, black 2px, transparent 0)`,
-                backgroundSize: "13px 13px",
-              }}
-            />
-            <div className="  text-black  relative z-10">
-              <img
-                src="/assets/Statesection/Function2.png"
-                className="w-auto h-28   transition-all duration-300"
-              />
-            </div>
-          </div>
 
-          <div className="p-2  text-center">
-            <h3 className="text-black text-xl font-semibold mb-2">
-              App Development
-            </h3>
-            <p className="text-[#8E8F92] text-sm leading-relaxed">
-              Scalable, high-performance mobile solutions.
-            </p>
-          </div>
-        </div>
-
-        {/* Developer Card */}
-        <div className="bg-[#F7F7F7]  rounded-lg overflow-hidden">
-          <div className=" relative h-40 bg-[#EFEFEF]  m-2 flex items-center justify-center group">
-            {/* Background pattern */}
-            <div
-              className="absolute inset-0 opacity-15"
-              style={{
-                backgroundImage: `radial-gradient(circle at 2px 2px, black 2px, transparent 0)`,
-                backgroundSize: "13px 13px",
-              }}
-            />
-            <div className="text-gray-400 relative mt-4 z-10 text-xs font-mono">
-              <img
-                src="/assets/Statesection/design.png"
-                className=" w-auto max-h-36   transition-all duration-300"
-              />
-            </div>
-          </div>
-          <div className="p-2 text-center">
-            <h3 className="text-black text-xl font-semibold mb-2">
-              UX/UI Design
-            </h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Intuitive, user-centered digital experiences.
-            </p>
-          </div>
-        </div>
-
-        {/* 3rd card          */}
-        <div className="bg-[#F7F7F7] rounded-lg overflow-hidden">
-          <div className="relative h-40 m-2 bg-[#EFEFEF] flex items-center justify-center group">
-            {/* Background pattern */}
-            <div
-              className="absolute inset-0 opacity-15"
-              style={{
-                backgroundImage: `radial-gradient(circle at 2px 2px, black 2px, transparent 0)`,
-                backgroundSize: "13px 13px",
-              }}
-            />
-
-            {/* Content on top of the pattern */}
-            <div className="relative z-10 text-gray-400 flex flex-col items-center">
-              {/* Image with saturation effect */}
-              <div className="mt-4">
-                <img
-                  src="/assets/Statesection/dev.png"
-                  className="w-auto h-36  transition-all duration-300"
-                />
+      {/* Cards Grid */}
+      <div className="grid md:grid-cols-3 gap-8 ">
+        {/* App Development Card */}
+        <div className="bg-green-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-lg p-4 mb-6 overflow-hidden">
+            {/* Mac-like browser header */}
+            <div className="flex items-center mb-4">
+              <div className="w-3 h-3 rounded-full bg-red-500 mr-1"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500 mr-1"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500 mr-1"></div>
+              <div className="ml-auto">
+                <span className="text-xs px-2 py-1 bg-yellow-100 rounded text-gray-700">main.js</span>
               </div>
             </div>
+            {/* Placeholder for code image */}
+            <div className="w-full h-48 flex items-center justify-center bg-gray-100 rounded">
+            <img src='assets/WhatWeDo/code.svg' className=' w-fit h-fit'/>          
+            </div>
           </div>
+          <h3 className="text-xl font-bold mb-2">App Development</h3>
+          <p className="text-gray-600">
+            Scalable, high-performance mobile solutions.
+          </p>
+        </div>
 
-          <div className="p-2 text-center">
-            <h3 className="text-black text-xl font-semibold mb-2">
-              Web Development{" "}
-            </h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
-            Fast, responsive, and dynamic websites.
-            </p>
+        {/* UX/UI Design Card */}
+        <div className="bg-blue-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-lg p-4 mb-6 overflow-hidden">
+            {/* Mac-like browser header */}
+            <div className="flex items-center mb-4 relative">
+              <div className="w-3 h-3 rounded-full bg-red-500 mr-1"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500 mr-1"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500 mr-1"></div>
+              <div className="ml-auto">
+                <span className="text-xs  relative px-2 py-1 bg-blue-100 rounded text-gray-700">Figma</span>
+              </div>
+            </div>
+            {/* Placeholder for Figma UI image */}
+            <div className="w-full h-48 flex items-center justify-center bg-gray-100 rounded">
+              <img src='assets/WhatWeDo/figma.svg' className=' w-fit h-fit'/>          
+            </div>
           </div>
+          <h3 className="text-xl font-bold mb-2">UX/UI Design</h3>
+          <p className="text-gray-600">
+            Intuitive, user-centered digital experiences.
+          </p>
+        </div>
+
+        {/* Web Development Card */}
+        <div className="bg-orange-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-lg p-4 mb-6 overflow-hidden">
+            {/* Mac-like browser header */}
+            <div className="flex   relative items-center mb-4">
+              <div className="w-3 h-3 rounded-full bg-red-500 mr-1"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500 mr-1"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500 mr-1"></div>
+              <div className="ml-auto">
+                <span className="text-xs px-2 py-1 relative bg-red-100 rounded text-gray-700">main.html</span>
+              </div>
+            </div>
+            {/* Placeholder for website image */}
+            <div className="w-full h-48 flex items-center justify-center bg-gray-100 rounded">
+            <img src='assets/WhatWeDo/web.svg' className=' w-fit h-fit'/>          
+            </div>
+          </div>
+          <h3 className="text-xl font-bold mb-2">Web Development</h3>
+          <p className="text-gray-600">
+            Fast, responsive, and dynamic websites.
+          </p>
         </div>
       </div>
     </div>
-  </section>
-  )
-}
+  );
+};
+
+export default WhatWeDoSection; 
