@@ -82,6 +82,7 @@ const OurServicesSection = () => {
                 <img
                   src="/assets/Hover/Function.png"
                   alt="devloper"
+                  loading="lazy"
                   className=" w-auto max-h-24 saturate-[5%] group-hover:saturate-100 transition-all duration-300"
                 />
               
@@ -119,6 +120,7 @@ const OurServicesSection = () => {
                   <img
                     src="/assets/Hover/BooKAll.png"
                     alt="social-media"
+                    loading="lazy"
                     className="w-auto h-28 saturate-0 group-hover:saturate-100 transition-all duration-300"
                   />
                 </div>

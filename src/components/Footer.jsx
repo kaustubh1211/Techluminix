@@ -13,6 +13,7 @@ const Footer = () => {
               <img
                 src="/assets/Logo/logo.svg"
                 alt="TechLuminix Logo"
+                loading="lazy"
                 className="h-10 w-8"
               />
               <h3 className="font-semibold text-lg">TECHLUMINIX</h3>

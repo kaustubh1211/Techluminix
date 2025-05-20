@@ -27,38 +27,40 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="bg-black py-16 mx-auto px-4 lg:px-24">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white">Why choose us?</h2>
-          <p className="text-[#8E8F92] mt-4">
-            Innovative solutions, seamless designs, and technology that drives
-            success.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="flex flex-col   bg-[#131316] p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
-            >
-              <div className=" bg-gradient-to-b from-[#3770ED] to-[#1F4087] text-white  w-20 p-4   rounded-lg mb-6">
-                <img
-                  src={feature.icon}
-                  alt={feature.title}
-                  className="w-12 h-12"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">
-                {feature.title}
-              </h3>
-              <p className="text-[#8E8F92]">{feature.description}</p>
-            </div>
-          ))}
-        </div>
+    <section className="bg-black mx-auto px-4 lg:px-24">
+    <div className="container mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold text-white">Why choose us?</h2>
+        <p className="text-[#8E8F92] mt-4 mx-auto max-w-md">
+          Innovative solutions, seamless designs, and technology that drives
+          success.
+        </p>
       </div>
-    </section>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center sm:items-start bg-[#131316] p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            <div className="bg-gradient-to-b from-[#3770ED] to-[#1F4087] text-white w-20 p-4 rounded-lg mb-6 flex justify-center items-center">
+              <img
+                src={feature.icon}
+                alt={feature.title}
+                className="w-12 h-12"
+              />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-4 text-center sm:text-left">
+              {feature.title}
+            </h3>
+            <p className="text-[#8E8F92] text-center sm:text-left">
+              {feature.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
   );
 };
 

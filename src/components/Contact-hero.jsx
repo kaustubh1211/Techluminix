@@ -44,6 +44,7 @@ const ContactHero = () => {
             <img
               src="/assets/Logo/10.png"
               alt="VR User"
+              loading='lazy'
               className=" w-56 h-52 object-contain"
             
             />

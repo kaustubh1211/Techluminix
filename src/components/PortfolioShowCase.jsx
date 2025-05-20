@@ -53,6 +53,7 @@ const PortfolioShowcase = () => {
                   src={project.image}
                   alt={project.name}
                   className="w-full h-full object-cover rounded"
+                  loading="lazy"
                   width={800}
                   height={800}
                 /> 
