@@ -27,10 +27,10 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="bg-black mx-auto px-4 lg:px-24">
+    <section className="bg-black py-16 mx-auto px-4 lg:px-24">
     <div className="container mx-auto">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-white">Why choose us?</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">Why choose us?</h2>
         <p className="text-[#8E8F92] mt-4 mx-auto max-w-md">
           Innovative solutions, seamless designs, and technology that drives
           success.

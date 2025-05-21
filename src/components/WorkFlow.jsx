@@ -36,7 +36,7 @@ const DevelopmentShowcase = () => {
         {/* Header Section */}
 
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Seamless End-to-End Development,
             <br />
             Engineered for Excellence.

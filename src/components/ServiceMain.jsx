@@ -21,7 +21,7 @@ const ServiceMain = () => {
           }`}
         >
           <h3 
-            className={`text-blue-600 font-medium mb-4 transition-all duration-500 delay-100 ${
+            className={`text-blue-600 text-3xl md:text-4xl lg:text-4xl font-medium mb-4 transition-all duration-500 delay-100 ${
               isLoaded ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
@@ -29,7 +29,7 @@ const ServiceMain = () => {
           </h3>
 
           <h1 
-            className={`text-2xl md:text-4xl font-sans font-semibold text-[600] mb-6 transition-all duration-500 delay-200 mx-auto md:mx-0 max-w-lg ${
+            className={`text-3xl md:text-4xl lg:text-5xl font-sans font-semibold text-[600] mb-6 transition-all duration-500 delay-200 mx-auto md:mx-0 max-w-lg ${
               isLoaded ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >

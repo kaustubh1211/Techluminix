@@ -91,7 +91,7 @@ const TestimonialSlider = () => {
     <div className="w-full bg-black py-40 relative z-40">
       <div className="max-w-full mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Happy & Satisfied Faces
           </h2>
           <p className="text-gray-400">

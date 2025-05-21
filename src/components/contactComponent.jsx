@@ -9,7 +9,7 @@ const ContactComponent = () => {
         <ContactBackground/>
         {/* Header Section */}
         <div className="text-center mb-12">
-        <h1 className="text-5xl font-bold mb-4 bg-gradient-to-b from-white to-gray-400 text-transparent bg-clip-text">Contact Us Today</h1>          <p className="text-gray-400 text-lg">Contact us via email, phone, or form—we're here to help!</p>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-b from-white to-gray-400 text-transparent bg-clip-text">Contact Us Today</h1>          <p className="text-gray-400 text-lg">Contact us via email, phone, or form—we're here to help!</p>
         </div>
         
         {/* Contact Cards */}

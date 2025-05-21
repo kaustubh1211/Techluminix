@@ -127,7 +127,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* Text content with subtle background */}
-                <div className="mb-2 pl-5 relative">
+                <div className=" mt-11 pl-5 relative">
                   {/* Subtle text background gradient */}
                   <div className="absolute -left-1 top-0 w-full h-full bg-gradient-to-r from-blue-50/30 to-transparent rounded-lg" />
 

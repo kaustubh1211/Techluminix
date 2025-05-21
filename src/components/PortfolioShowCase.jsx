@@ -30,7 +30,7 @@ const PortfolioShowcase = () => {
       <div className=" container mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-2">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
             Our Work, Your Vision
             <br />
             Brought to Life

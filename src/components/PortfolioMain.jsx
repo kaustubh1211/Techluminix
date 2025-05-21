@@ -353,7 +353,7 @@ const PortfolioComponent = () => {
         }`}
       >
         <h3 className="text-blue-600 font-medium mb-2">Our Portfolio</h3>
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Recent Work</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Our Recent Work</h2>
         <p className="text-[#8E8F92] max-w-2xl mx-auto">
           Explore our diverse portfolio showcasing our expertise across various
           digital domains

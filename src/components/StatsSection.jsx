@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState, useEffect, useRef } from "react";
 
 const AnimatedCounter = ({ value, suffix }) => {
@@ -14,7 +14,7 @@ const AnimatedCounter = ({ value, suffix }) => {
     const animateCounter = (timestamp) => {
       if (!startTimestamp) startTimestamp = timestamp;
       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      
+
       const currentValue = Math.floor(progress * parseInt(value));
       setDisplayValue(currentValue);
 
@@ -54,7 +54,7 @@ const AnimatedCounter = ({ value, suffix }) => {
 const StatsSection = () => {
   const services = [
     "UI/UX Design",
-    "Frontend Development", 
+    "Frontend Development",
     "Backend Development",
     "MEARN Stack",
     "Blockchain Development",
@@ -71,23 +71,34 @@ const StatsSection = () => {
     <section className="w-full mx-auto px-4 lg:px-24    justify-self-center mt-24">
       <div className="container mx-auto px-4">
         {/* Services navbar */}
-         {/* Services navbar with infinite scroll animation */}
-         <div className="relative w-full overflow-hidden bg-[#F7F7F7] rounded-full py-4 px-6 mb-12 shadow-sm">
-          <div className="animate-marquee whitespace-nowrap">
-            {/* Repeated services for seamless scrolling */}
-            {[...services, ...services].map((service, index) => (
-              <span  
-                key={index} 
-                className="inline-block px-4 text-gray-800 font-medium"
-              >
-                {service}
-                {index < services.length - 1 && (
-                  <span className="mx-4 text-gray-300"></span>
-                )}
-              </span>
-            ))}
-          </div>
-        </div>
+       {/* Smooth infinite scrolling marquee */}
+<div className="relative overflow-hidden bg-[#F7F7F7] rounded-full py-4 px-6 mb-12 shadow-sm">
+<div className="flex whitespace-nowrap animate-marquee-ultra sm:animate-marquee-fast lg:animate-marquee">
+    <div className="flex shrink-0">
+      {services.map((service, index) => (
+        <span
+          key={`a-${index}`}
+          className="inline-block px-4 text-gray-800 font-medium"
+        >
+          {service}
+          <span className="mx-4 text-gray-300">|</span>
+        </span>
+      ))}
+    </div>
+    <div className="flex shrink-0">
+      {services.map((service, index) => (
+        <span
+          key={`b-${index}`}
+          className="inline-block px-4 text-gray-800 font-medium"
+        >
+          {service}
+          <span className="mx-4 text-gray-300">|</span>
+        </span>
+      ))}
+    </div>
+  </div>
+</div>
+
 
         {/* Stats grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

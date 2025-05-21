@@ -89,7 +89,7 @@ const ContactUs = () => {
     <div className="max-w-7xl mx-auto pt-8 pb-16   ">
       {/* Contact us button */}
       <div className="mb-12 flex flex-col md:flex-row items-center">
-        <button className="border    border-blue-500 text-blue-500 px-6 py-2 rounded-full hover:bg-blue-500 hover:text-white transition-colors">
+        <button className="border   border-blue-500 text-blue-500 px-6 py-2 rounded-full hover:bg-blue-500 hover:text-white transition-colors">
           Contact us
         </button>
       </div>
@@ -97,10 +97,10 @@ const ContactUs = () => {
       <div className="flex flex-col lg:flex-row gap-12  ">
         {/* Left side content */}
         <div className="w-full lg:w-1/2 pr-0 lg:pr-8 ">
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-b from-white to-gray-400 text-transparent bg-clip-text">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl text-center md:text-left font-bold mb-4 bg-gradient-to-b from-white to-gray-400 text-transparent bg-clip-text">
             Contact Us Today
           </h1>
-          <p className="text-gray-400 text-lg mb-8">
+          <p className="text-gray-400 text-lg mb-8 text-center md:text-left">
             For any inquiries or support, reach out to us via email, phone, or our contact form. We're here to help!
           </p>
 

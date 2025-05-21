@@ -21,7 +21,7 @@ export default function Home() {
           name="description"
           content="TechLuminix crafts stunning websites, develops powerful software, and boosts your online presence with expert digital marketing."
         />
-        <meta
+        <meta 
           name="keywords"
           content="Software Development, Web Development,App Development, Digital Marketing, UI/UX Design, TechLuminix , Frontend, Backend"
         />

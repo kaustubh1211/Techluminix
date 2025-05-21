@@ -87,12 +87,12 @@ const ServicesSection = () => {
         <div className={`text-center mb-12 text-white transition-all duration-700 ease-out ${
           isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}>
-          <div className={`text-blue-600 font-medium mb-2 transition-all duration-500 delay-100 ${
+          <div className={`text-blue-600 text-3xl md:text-4xl lg:text-4xl font-medium mb-2 transition-all duration-500 delay-100 ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}>
             Our Service
           </div>
-          <h2 className={`text-3xl md:text-4xl font-bold mb-4 transition-all duration-500 delay-200 ${
+          <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 transition-all duration-500 delay-200 ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}>
             Different services for different needs

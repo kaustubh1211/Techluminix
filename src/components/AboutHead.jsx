@@ -55,7 +55,7 @@ export default function AboutHead() {
               About us
             </div>
             
-            <h1 className="text-5xl md:text-5xl font-bold leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
               <span className="text-white block mb-2">Who we are.</span>
               <span className="bg-gradient-to-r text-white bg-clip-text text-transparent">What we do.</span>
             </h1>

@@ -6,8 +6,8 @@ const OurServicesSection = () => {
       <div className=" mx-auto ">
         {/* Heading */}
         <div className="text-center mb-12  ">
-          <h2 className="text-white text-4xl font-bold mb-2">
-            We're the most cherished and <br /> trusted company.
+          <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
+            We're the most cherished and  trusted company.
           </h2>
         </div>
 

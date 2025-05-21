@@ -16,15 +16,17 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      animation: {
-        marquee: 'marquee 20s linear infinite',
-      },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-50%)' },
-        }
-      }
+        },
+      },
+      animation: {
+        'marquee': 'marquee 12s linear infinite',
+        'marquee-fast': 'marquee 6s linear infinite',
+        'marquee-ultra': 'marquee 3s linear infinite', // fast for phones
+      },
     },
   },
   plugins: [],
