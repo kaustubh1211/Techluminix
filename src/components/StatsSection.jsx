@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const AnimatedCounter = ({ value, suffix }) => {
   const [displayValue, setDisplayValue] = useState(0);
@@ -58,6 +59,7 @@ const StatsSection = () => {
     "Backend Development",
     "MEARN Stack",
     "Blockchain Development",
+    
   ];
 
   const stats = [
@@ -67,42 +69,46 @@ const StatsSection = () => {
     { value: "20", suffix: "+", label: "Recognition Received" },
   ];
 
+    const repeatedServices = [...services, ...services, ...services];
+  const itemWidth = 180; // adjust if padding/margin changes
+  const totalWidth = services.length * itemWidth;
+
   return (
-    <section className="w-full mx-auto px-4 lg:px-24    justify-self-center mt-24">
+      <section className="w-full mx-auto px-4 lg:px-24 justify-self-center mt-24">
       <div className="container mx-auto px-4">
-        {/* Services navbar */}
-       {/* Smooth infinite scrolling marquee */}
-<div className="relative overflow-hidden bg-[#F7F7F7] rounded-full py-4 px-6 mb-12 shadow-sm">
-<div className="flex whitespace-nowrap animate-marquee-ultra sm:animate-marquee-fast lg:animate-marquee">
-    <div className="flex shrink-0">
-      {services.map((service, index) => (
-        <span
-          key={`a-${index}`}
-          className="inline-block px-4 text-gray-800 font-medium"
-        >
-          {service}
-          <span className="mx-4 text-gray-300">|</span>
-        </span>
-      ))}
-    </div>
-    <div className="flex shrink-0">
-      {services.map((service, index) => (
-        <span
-          key={`b-${index}`}
-          className="inline-block px-4 text-gray-800 font-medium"
-        >
-          {service}
-          <span className="mx-4 text-gray-300">|</span>
-        </span>
-      ))}
-    </div>
-  </div>
-</div>
 
+        {/* 🟢 Smooth right-to-left services scroll */}
+        <div className="relative overflow-hidden bg-[#F7F7F7] rounded-full py-4 px-6 mb-12 shadow-sm">
+          <motion.div
+            className="flex whitespace-nowrap"
+            animate={{ x: [0, -totalWidth] }}
+            transition={{
+              repeat: Infinity,
+              duration: 10,
+              ease: "linear",
+              repeatType: "loop"
+            }}
+          >
+            {repeatedServices.map((service, index) => (
+              <span
+                key={index}
+                className="inline-block px-4 text-gray-800 font-medium min-w-max"
+              >
+                {service}
+                <span className="mx-4 text-gray-300">|</span>
+              </span>
+            ))}
+          </motion.div>
+        </div>
 
-        {/* Stats grid */}
+        {/* 🔢 Stats grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat, index) => (
+          {[
+            { value: "40", suffix: "+", label: "Completed project" },
+            { value: "100", suffix: "%", label: "Happy Customer" },
+            { value: "5", suffix: "+", label: "Years of Experience" },
+            { value: "20", suffix: "+", label: "Recognition Received" },
+          ].map((stat, index) => (
             <div key={index} className="bg-[#F7F7F7] p-8 text-center">
               <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               <p className="text-gray-600">{stat.label}</p>

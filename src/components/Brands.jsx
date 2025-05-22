@@ -26,9 +26,7 @@ function ParallaxBrands() {
             {/* Infinite Scrolling Animation */}
             <motion.div
                 className="flex whitespace-nowrap"
-                animate={{
-                    x: [-totalWidth, 0]
-                }}
+              animate={{ x: [0, -totalWidth] }}
                 transition={{
                     repeat: Infinity,
                     duration: 10,
