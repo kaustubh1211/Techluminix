@@ -113,7 +113,7 @@ const HeroSection = () => {
                   <img
                     src="assets/Hero/pointer.svg"
                     alt="Pointer"
-                    className="w-30 absolute align-middle mt-16 right-2 h-30 filter drop-shadow-md"
+                    className="w-30  z-30  absolute align-middle  mt-16 right-1 h-30 filter drop-shadow-md"
                     width={120}
                     height={150}
                   />

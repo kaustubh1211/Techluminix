@@ -345,7 +345,7 @@ const PortfolioComponent = () => {
   }, []);
 
   return (
-    <div className="bg-black my-24 text-white py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="bg-black my-24 text-white mx-auto px-4 lg:px-24 overflow-hidden">
       {/* Section Title with fade-in animation */}
       <div
         className={`text-center mb-12 transition-all duration-700 ease-out ${
